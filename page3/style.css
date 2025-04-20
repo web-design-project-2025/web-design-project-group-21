@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    color: #222;
+  }
+  
+  .header {
+    background-color: #A0C49D;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo {
+    height: 50px;
+  }
+  
+  .search-container {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .search-container input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 1000;
+  }
+  
+  .autocomplete-suggestions div {
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .autocomplete-suggestions div:hover {
+    background-color: #eee;
+  }
+  
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .icon {
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
+  #lang-toggle {
+    background: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  main {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .deal-container {
+    max-width: 1000px;
+    width: 100%;
+  }
+  
+  .deal-card {
+    background: #eae7e2;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .deal-text {
+    flex: 1 1 300px;
+  }
+  
+  .deal-text h1 {
+    margin-top: 0;
+    font-size: 26px;
+  }
+  
+  .deal-text p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  
+  .add-btn {
+    background-color: #5E785F;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  
+  .add-btn:hover {
+    background-color: #4a624c;
+  }
+  
+  .deal-img img {
+    width: 300px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  @media (max-width: 768px) {
+    .deal-card {
+      flex-direction: column;
+      align-items: center;
+    }
+    .deal-img img {
+      width: 100%;
+    }
+  }
