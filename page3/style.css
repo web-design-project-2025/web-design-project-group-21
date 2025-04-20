@@ -141,3 +141,150 @@ body {
       width: 100%;
     }
   }
+
+  :root {
+    --green: #A0C49D;
+    --dark-green: #5E785F;
+    --light-gray: #e0e0e0;
+  }
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+  }
+  header {
+    background: var(--green);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .search-box {
+    flex: 1;
+    margin: 0 20px;
+    position: relative;
+  }
+  .search-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+  }
+  .header-icons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+  }
+  main {
+    padding: 20px;
+  }
+  .filters {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+  }
+  .filters button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+  }
+  .filters button.active {
+    border-color: var(--dark-green);
+    font-weight: bold;
+  }
+  .ticket {
+    background: #eee;
+    padding: 10px;
+    display: flex;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .ticket img {
+    width: 140px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+  .ticket-content {
+    flex: 1;
+  }
+  .ticket-content h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+  .ticket-content p {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  .ticket-price {
+    text-align: center;
+    min-width: 150px;
+  }
+  .ticket-price span {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .ticket-price button {
+    background: var(--dark-green);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .autocomplete-suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-top: none;
+    max-height: 150px;
+    overflow-y: auto;
+    z-index: 999;
+  }
+  .autocomplete-suggestions div {
+    padding: 8px;
+    cursor: pointer;
+  }
+  .autocomplete-suggestions div:hover {
+    background-color: #eee;
+  }
+  .favorite-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--dark-green);
+  }
+
+  @media (max-width: 768px) {
+    .ticket {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .ticket img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .ticket-price {
+      text-align: left;
+      margin-top: 10px;
+    }
+    .header-icons {
+      flex-direction: column;
+    }
+  }
