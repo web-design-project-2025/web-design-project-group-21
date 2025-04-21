@@ -126,3 +126,25 @@ header {
   cursor: pointer;
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  .ticket {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ticket img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .ticket-price {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .header-icons {
+    flex-direction: column;
+  }
+}

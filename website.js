@@ -78,3 +78,40 @@ function searchTrips() {
     }\nFrom: ${arrival} To: ${departure}`
   );
 }
+
+const cities = ["stockholm", "goteborg"];
+
+function showSuggestions() {
+  const input = document.getElementById("searchInput");
+  const val = input.value.toLowerCase();
+  const list = document.getElementById("autocomplete-list");
+  list.innerHTML = "";
+  if (!val) return;
+
+  cities
+    .filter((city) => city.includes(val))
+    .forEach((city) => {
+      const div = document.createElement("div");
+      div.textContent = city;
+      div.onclick = () => {
+        input.value = city;
+        list.innerHTML = "";
+        handleSearch();
+      };
+      list.appendChild(div);
+    });
+}
+function toggleFavorite(button) {
+  const ticket = button.closest(".ticket");
+  const id = ticket.querySelector("h3").textContent;
+  const isFav = button.textContent === "♥";
+  button.textContent = isFav ? "♡" : "♥";
+
+  let favorites = JSON.parse(localStorage.getItem("favorites") || "[]");
+  if (isFav) {
+    favorites = favorites.filter((f) => f !== id);
+  } else {
+    favorites.push(id);
+  }
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
