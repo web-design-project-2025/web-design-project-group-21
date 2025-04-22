@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalGuide – Ticket Search</title>
+  <style>
+    :root {
+      --green: #A0C49D;
+      --dark-green: #5E785F;
+      --light-gray: #e0e0e0;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    header {
+      background: var(--green);
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .search-box {
+      flex: 1;
+      margin: 0 20px;
+      position: relative;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      font-size: 16px;
+    }
+    .header-icons {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      color: white;
+      font-size: 14px;
+    }
+    main {
+      padding: 20px;
+    }
+    .filters {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 10px;
+    }
+    .filters button {
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+    }
+    .filters button.active {
+      border-color: var(--dark-green);
+      font-weight: bold;
+    }
+    .ticket {
+      background: #eee;
+      padding: 10px;
+      display: flex;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .ticket img {
+      width: 140px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-right: 20px;
+    }
+    .ticket-content {
+      flex: 1;
+    }
+    .ticket-content h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+    .ticket-content p {
+      font-size: 14px;
+      margin-top: 4px;
+    }
+    .ticket-price {
+      text-align: center;
+      min-width: 150px;
+    }
+    .ticket-price span {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .ticket-price button {
+      background: var(--dark-green);
+      color: white;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+  </style>
+<style>
+    .autocomplete-suggestions {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: white;
+      border: 1px solid #ccc;
+      border-top: none;
+      max-height: 150px;
+      overflow-y: auto;
+      z-index: 999;
+    }
+    .autocomplete-suggestions div {
+      padding: 8px;
+      cursor: pointer;
+    }
+    .autocomplete-suggestions div:hover {
+      background-color: #eee;
+    }
+    .favorite-btn {
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--dark-green);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="logo" height="50" />
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Choose your city" oninput="handleSearch(); showSuggestions()" autocomplete="off" />
+      <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+    </div>
+    <div class="header-icons">
+      <span onclick="alert('User Profile')" style="cursor:pointer">👤 Kyle</span>
+      <span onclick="alert('Cart is empty')" style="cursor:pointer">🛒</span>
+    </div>
+  <div style="position: absolute; right: 20px; top: 70px;">
+      <button onclick="switchLang()" id="lang-toggle">English / Swedish</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="filters">
+      <label for="sortSelect">Sort by:</label>
+      <select id="sortSelect" onchange="applySortFilter()">
+        <option value="default">Default</option>
+        <option value="price-asc">Price: Low to High</option>
+        <option value="price-desc">Price: High to Low</option>
+        <option value="location-asc">Location A-Z</option>
+        <option value="location-desc">Location Z-A</option>
+      </select>
+
+      <label for="priceRange">Max price:</label>
+      <input type="range" id="priceRange" min="0" max="1000" value="1000" oninput="applySortFilter()" /> <span id="priceValue">1000</span>
+
+      <label for="cityFilter">City:</label>
+      <select id="cityFilter" onchange="applySortFilter()">
+        <option value="all">All</option>
+        <option value="stockholm">Stockholm</option>
+        <option value="goteborg">Goteborg</option>
+      </select>
+      <button onclick="filterBy('all')" class="active">Sort by</button>
+      <button onclick="filterBy('price')">Price</button>
+      <button onclick="filterBy('location')">Location</button>
+    </div>
+
+    <div class="ticket" data-location="stockholm" data-price="300">
+      <img src="cinema.jpg" alt="cinema" />
+      <div class="ticket-content">
+        <h3>Cinema with Transport – 300 SEK</h3>
+        <p>Enjoy a movie night made easy! This combo deal includes a cinema ticket and public transport. It's a convenient and affordable way to enjoy films and get around with ease.</p>
+      </div>
+      <div class="ticket-price">
+        <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
+        <span>300 SEK</span>
+        <button onclick="window.location.href = 'cinema.html'">more info</button>
+      </div>
+    </div>
+
+    <div class="ticket" data-location="goteborg" data-price="400">
+      <img src="culture.jpg" alt="culture" />
+      <div class="ticket-content">
+        <h3>Culture Trip with Transport – 400 SEK</h3>
+        <p>This package includes access to museums and landmarks with public transport – a simple, affordable way to explore culture and get around hassle-free.</p>
+      </div>
+      <div class="ticket-price">
+        <span>400 SEK</span>
+        <button onclick="window.location.href = 'culture.html'">more info</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+<style>
+    @media (max-width: 768px) {
+      .ticket {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .ticket img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+      .ticket-price {
+        text-align: left;
+        margin-top: 10px;
+      }
+      .header-icons {
+        flex-direction: column;
+      }
+    }
+  </style>
+
+  
+<script>
+const cities = ["stockholm", "goteborg"];
+
+    function showSuggestions() {
+      const input = document.getElementById("searchInput");
+      const val = input.value.toLowerCase();
+      const list = document.getElementById("autocomplete-list");
+      list.innerHTML = "";
+      if (!val) return;
+      cities.filter(city => city.includes(val)).forEach(city => {
+        const div = document.createElement("div");
+        div.textContent = city;
+        div.onclick = () => {
+          input.value = city;
+          list.innerHTML = "";
+          handleSearch();
+        };
+        list.appendChild(div);
+      });
+    }
+
+    function toggleFavorite(button) {
+  const ticket = button.closest('.ticket');
+  const id = ticket.querySelector('h3').textContent;
+  const isFav = button.textContent === '♥';
+  button.textContent = isFav ? '♡' : '♥';
+
+  let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+  if (isFav) {
+    favorites = favorites.filter(f => f !== id);
+  } else {
+    favorites.push(id);
+  }
+  localStorage.setItem('favorites', JSON.stringify(favorites));
+}
+  </script>
+</body>
+</html>
