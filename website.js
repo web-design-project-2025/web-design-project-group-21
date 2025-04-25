@@ -261,3 +261,66 @@ function switchLang() {
   document.getElementById("cart-btn").textContent = t.cart;
   langBtn.textContent = t.toggle;
 }
+
+/*page 4*/
+function togglePassword() {
+  const pw = document.getElementById("password");
+  pw.type = pw.type === "password" ? "text" : "password";
+}
+
+function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  if (!user) {
+    alert("No user registered yet. Please sign up first.");
+    return;
+  }
+
+  const match =
+    (email === user.email || email === user.username) &&
+    password === user.password;
+
+  if (match) {
+    alert("Login successful!");
+    window.location.href = "index.html";
+  } else {
+    alert("Incorrect email/username or password.");
+  }
+}
+
+function switchLang() {
+  const toggleBtn = document.getElementById("lang-toggle");
+  const current = toggleBtn.textContent.includes("English") ? "sv" : "en";
+
+  const t = {
+    en: {
+      login: "Log in",
+      email: "Email or username",
+      password: "Password",
+      forgot: "Forgot password?",
+      continue: "Continue",
+      signup: "Don't have an account? Sign up here",
+      toggle: "English / Swedish",
+    },
+    sv: {
+      login: "Logga in",
+      email: "E-post eller användarnamn",
+      password: "Lösenord",
+      forgot: "Glömt lösenord?",
+      continue: "Fortsätt",
+      signup: "Har du inget konto? Registrera dig här",
+      toggle: "Svenska / Engelska",
+    },
+  };
+
+  const lang = t[current];
+  toggleBtn.textContent = lang.toggle;
+  document.querySelector(".login-form h2").textContent = lang.login;
+  document.querySelector("label[for='email']").textContent = lang.email;
+  document.querySelector("label[for='password']").textContent = lang.password;
+  document.querySelector(".forgot").textContent = lang.forgot;
+  document.querySelector(".submit-btn").textContent = lang.continue;
+  document.querySelector(".signup-link").innerHTML = lang.signup;
+}

@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <img src="img/logo.png" alt="logo" height="50" />
+      <img src="logo.png" alt="logo" height="50" />
       <div class="search-box">
         <input
           type="text"
@@ -31,16 +31,18 @@
         </button>
       </div>
     </header>
+
     <main>
       <div class="filters">
         <label for="sortSelect">Sort by:</label>
         <select id="sortSelect" onchange="applySortFilter()">
           <option value="default">Default</option>
           <option value="price-asc">Price: Low to High</option>
-          <option value="price-desc">Price: High to low</option>
+          <option value="price-desc">Price: High to Low</option>
           <option value="location-asc">Location A-Z</option>
-          <option value="Location-desc">Location Z-A</option>
+          <option value="location-desc">Location Z-A</option>
         </select>
+
         <label for="priceRange">Max price:</label>
         <input
           type="range"
@@ -51,6 +53,7 @@
           oninput="applySortFilter()"
         />
         <span id="priceValue">1000</span>
+
         <label for="cityFilter">City:</label>
         <select id="cityFilter" onchange="applySortFilter()">
           <option value="all">All</option>
@@ -58,15 +61,15 @@
           <option value="goteborg">Goteborg</option>
         </select>
 
-        <button onclick="filterBy ('all')" class="active">Sort by</button>
-        <button onclick="filterBy ('price')">Price</button>
-        <button onclick="filterBy ('Location')">Location</button>
+        <button onclick="filterBy('all')" class="active">Sort by</button>
+        <button onclick="filterBy('price')">Price</button>
+        <button onclick="filterBy('location')">Location</button>
       </div>
 
       <div class="ticket" data-location="stockholm" data-price="300">
         <img src="cinema.jpg" alt="cinema" />
         <div class="ticket-content">
-          <h3>Cinema with Transport - 300 SEK</h3>
+          <h3>Cinema with Transport – 300 SEK</h3>
           <p>
             Enjoy a movie night made easy! This combo deal includes a cinema
             ticket and public transport.
@@ -75,15 +78,16 @@
         <div class="ticket-price">
           <button class="favorite-btn" onclick="toggleFavorite(this)">♡</button>
           <span>300 SEK</span>
-          <button onclick="window.location.href ='cinema.html'">
+          <button onclick="window.location.href = 'cinema.html'">
             more info
           </button>
         </div>
       </div>
+
       <div class="ticket" data-location="goteborg" data-price="400">
         <img src="culture.jpg" alt="culture" />
         <div class="ticket-content">
-          <h3>Culture trip with transport - 400 SEK</h3>
+          <h3>Culture Trip with Transport – 400 SEK</h3>
           <p>
             This package includes access to museums and landmarks with public
             transport.
@@ -97,6 +101,7 @@
         </div>
       </div>
     </main>
+
     <script src="website.js"></script>
   </body>
 </html>
