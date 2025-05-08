@@ -1,0 +1,141 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header */
+.top-bar {
+  background-color: #A0C49D;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar .logo img {
+  height: 40px;
+}
+
+.top-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #000;
+}
+
+.profile {
+  font-size: 1rem;
+}
+
+/* Main Grid */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Form Section */
+.form-block {
+  background-color: #eee8e3;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.form-block h2 {
+  margin-bottom: 1rem;
+}
+
+.form-block label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-block input,
+.form-block select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #7c9a7d;
+  border-radius: 4px;
+}
+
+.name-fields {
+  display: flex;
+  gap: 1rem;
+}
+
+.name-fields div {
+  flex: 1;
+}
+
+.guest-selectors {
+  display: flex;
+  gap: 1rem;
+}
+
+.guest-selectors div {
+  flex: 1;
+}
+
+/* Summary Section */
+.summary-block {
+  background-color: #eee8e3;
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.summary-title {
+  margin-bottom: 1rem;
+  color: #5d7b57;
+}
+
+.summary-line {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+
+.summary-line.total {
+  border-top: 1px solid #333;
+  font-weight: bold;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Payment Section */
+.payment-section {
+  margin-top: 2rem;
+}
+
+.payment-section h4 {
+  margin-bottom: 0.5rem;
+}
+
+.payment-section label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Book Button */
+.book-btn {
+  background-color: #5d7b57;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.book-btn:hover {
+  background-color: #4a6b47;
+}

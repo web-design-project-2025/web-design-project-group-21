@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+  <header class="top-bar">
+    <div class="logo"><img src="logo.png" alt="GlobalGuide Sweden"></div>
+    <nav class="top-nav">
+      <a href="#">Home</a>
+      <a href="#">Activities</a>
+      <a href="#">My bookings</a>
+      <a href="#">Help center</a>
+    </nav>
+    <div class="profile">👤 Kyle 🛒</div>
+  </header>
+
+  <main class="checkout-grid">
+    <section class="form-block">
+      <h2>Please fill in your details below</h2>
+      <label>Email:</label>
+      <input type="email">
+      <label>Phone number:</label>
+      <input type="tel">
+
+      <div class="name-fields">
+        <div>
+          <label>First name:</label>
+          <input type="text">
+        </div>
+        <div>
+          <label>Last name:</label>
+          <input type="text">
+        </div>
+      </div>
+
+      <h4>Number of guests:</h4>
+      <div class="guest-selectors">
+        <div>
+          <label>Adults:</label>
+          <select><option>0</option><option selected>1</option><option>2</option></select>
+        </div>
+        <div>
+          <label>Children:</label>
+          <select><option selected>0</option><option>1</option><option>2</option></select>
+        </div>
+      </div>
+
+      <label>Check-in date:</label>
+      <input type="date">
+      <label>Check-out date:</label>
+      <input type="date">
+    </section>
+
+    <section class="summary-block">
+      <h3 class="summary-title">Order summary</h3>
+      <div id="orderDetails">Loading cart details...</div>
+
+      <div class="payment-section">
+        <h4>Payment options</h4>
+        <label><input type="checkbox" checked> Paypal</label>
+        <label><input type="checkbox"> Card</label>
+      </div>
+
+      <button class="book-btn">Book now</button>
+    </section>
+  </main>
+
+  <script>
+    const cart = JSON.parse(localStorage.getItem("cart") || "[]");
+    const container = document.getElementById("orderDetails");
+
+    if (cart.length === 0) {
+      container.innerHTML = '<p>Your cart is empty.</p>';
+    } else {
+      let total = 0;
+      const html = cart.map(item => {
+        total += parseInt(item.price);
+        return `<div class="summary-line"><span>${item.title}</span><span>${item.price} SEK</span></div>`;
+      }).join('');
+
+      container.innerHTML = `
+        ${html}
+        <div class="summary-line total"><span>Total to pay</span><span><strong>${total} SEK</strong></span></div>
+      `;
+    }
+  </script>
+</body>
+</html>
