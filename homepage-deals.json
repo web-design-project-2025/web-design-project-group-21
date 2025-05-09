@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Stockholm City Pass",
+    "description": "Access to museums, transportation and more.",
+    "image": "images/stockholm-pass.jpg"
+  },
+  {
+    "title": "Gothenburg Archipelago Cruise",
+    "description": "Half-day boat trip through scenic islands.",
+    "image": "images/gothenburg-cruise.jpg"
+  },
+  {
+    "title": "Malmö Cultural Day Tour",
+    "description": "Walking tour with local guide and entrance fees included.",
+    "image": "images/malmo-tour.jpg"
+  },
+  {
+    "title": "Uppsala Historic Highlights",
+    "description": "Explore Sweden's oldest university town.",
+    "image": "images/uppsala-tour.jpg"
+  }
+]
