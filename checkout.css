@@ -6,14 +6,14 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: #f7f7f7;
   color: #333;
 }
 
 /* Header */
 .top-bar {
-  background-color: #A0C49D;
+  background-color: #a0c49d;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
