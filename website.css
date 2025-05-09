@@ -11,6 +11,7 @@ body {
   margin: 0;
   background-color: #f5f5f5;
   color: #1a1a1a;
+  text-decoration: none;
 }
 
 header {
@@ -20,18 +21,24 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  color: white;
+  text-decoration: none;
 }
 
 .header-left img {
   height: 60px;
+  color: white;
+  text-decoration: none;
+  display: flex;
 }
 
-.header-right {
+.header-right a {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   gap: 20px;
   color: white;
   font-size: 14px;
+  text-decoration: none;
 }
 
 .hero {
@@ -74,6 +81,11 @@ header {
   border: none;
 }
 
+.center-btn {
+  margin-top: 40px;
+  padding: 6px 16px;
+}
+
 .section {
   padding: 40px 20px;
   background-color: white;
@@ -94,7 +106,7 @@ header {
   background-color: white;
   border-radius: 8px;
   overflow: hidden;
-  width: 230px;
+  width: 280px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   margin-left: 10px;
   margin-right: 16px;
