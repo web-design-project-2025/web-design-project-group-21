@@ -1,7 +1,7 @@
 /*index*/
 :root {
-  --green: #a0c49d;
-  --dark-green: #5e785f;
+  --green: #273725;
+  --dark-green: #273725;
   --light-gray: #e0e0e0;
   --gray: #666;
 }
@@ -152,7 +152,7 @@ header {
 
 /*activities*/
 :root {
-  --green: #a0c49d;
+  --green: #273725;
   --dark-green: #5e785f;
   --light-gray: #e0e0e0;
 }
