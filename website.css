@@ -1,4 +1,4 @@
-/*page 1*/
+/*index*/
 :root {
   --green: #a0c49d;
   --dark-green: #5e785f;
@@ -150,7 +150,7 @@ header {
   }
 }
 
-/*page 2*/
+/*activities*/
 :root {
   --green: #a0c49d;
   --dark-green: #5e785f;
@@ -321,7 +321,7 @@ main {
   }
 }
 
-/*page 3*/
+/*cinemadeal*/
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -613,7 +613,7 @@ main {
   }
 }
 
-/*page 4*/
+/*login*/
 body {
   margin: 0;
   font-family: "Segoe UI", sans-serif;
@@ -742,7 +742,7 @@ body {
   text-decoration: underline;
 }
 
-/*page 5*/
+/*helpcentre*/
 .help-centre {
   max-width: 800px;
   margin: 0 auto;
