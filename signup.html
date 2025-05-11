@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - GlobalGuide</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="signup-style.css">
+</head>
+<body>
+  <header class="header">
+    <img src="logo.png" alt="GlobalGuide Logo" class="logo">
+    <nav class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Activities</a>
+      <a href="#">My bookings</a>
+      <a href="#">Help center</a>
+    </nav>
+    <div class="lang-switch">
+      <button onclick="switchLang()" id="lang-toggle">English / Swedish</button>
+    </div>
+  </header>
+
+  <main class="signup-container">
+    <form class="signup-form">
+      <h2>Sign up</h2>
+
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Please use only letters and numbers" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter the email you want to use on GlobeGuide" required>
+
+      <label for="password">Password</label>
+      <div class="password-field">
+        <input type="password" id="password" name="password" placeholder="At least 7 characters, include letters and 1 number" required>
+        <span class="toggle-password" onclick="togglePassword()">👁️</span>
+      </div>
+
+      <div class="checkbox-group">
+        <label><input type="checkbox"> I’d like to receive personalized offers and be the first to know about the latest updates on GlobeGuide.</label>
+        <label><input type="checkbox" required> By registering, I confirm that I accept GlobeGuide terms and conditions.</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Sign me up!</button>
+    </form>
+  </main>
+
+  <script>
+    function togglePassword() {
+      const pw = document.getElementById('password');
+      pw.type = pw.type === 'password' ? 'text' : 'password';
+    }
+    function switchLang() {
+      const btn = document.getElementById('lang-toggle');
+      btn.textContent = btn.textContent.includes('English') ? 'Svenska / Engelska' : 'English / Swedish';
+      
+    }
+  </script>
+</body>
+</html>

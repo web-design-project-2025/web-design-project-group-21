@@ -1,0 +1,10 @@
+{
+  "id": "cinema1",
+  "name": "Stockholm Cinema Ticket",
+  "price": 100,
+  "description": "Experience the latest movies in top cinemas across Sweden. Enjoy a wide selection of international blockbusters and local Swedish films in a comfortable, modern setting.",
+  "validity": "One-time entry",
+  "location": ["Stockholm", "Gothenburg", "Malmö"],
+  "note": "Please note that if your visit requires travel (e.g. a bus ticket or overnight stay), the total cost may be higher than the listed ticket price.",
+  "image": "cinema-stockholm.jpg"
+}
