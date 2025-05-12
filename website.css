@@ -14,38 +14,34 @@ body {
   text-decoration: none;
 }
 
-header {
-  background-color: var(--green);
-  padding: 10px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  color: white;
-  text-decoration: none;
-}
-
-.header-left img {
-  height: 60px;
-  color: white;
-  text-decoration: none;
-  display: flex;
-}
-
-.header-right a {
-  display: flex;
-  align-items: baseline;
-  gap: 20px;
-  color: white;
-  font-size: 14px;
-  text-decoration: none;
-}
-
 .hero {
   background-color: var(--green);
   padding: 40px 20px 20px;
   color: white;
   text-align: left;
+}
+header {
+  background-color: #000;
+  padding: 10px 20px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.header-container a,
+.header-container .lang-switch {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.header-container img {
+  height: 200px;
 }
 
 .hero h1 {
@@ -108,8 +104,6 @@ header {
   overflow: hidden;
   width: 280px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  margin-left: 10px;
-  margin-right: 16px;
 }
 
 .card img {
@@ -143,6 +137,16 @@ header {
   font-size: 13px;
 }
 
+#view-all-btn {
+  font-size: 18px;
+  width: 230px;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #5e785f;
+  color: white;
+  border: none;
+}
+
 @media (max-width: 768px) {
   .ticket {
     flex-direction: column;
@@ -163,6 +167,37 @@ header {
   .header-icons {
     flex-direction: column;
   }
+}
+
+.footer-left,
+.footer-right {
+  flex: 2;
+  max-width: 50%;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.footer-left ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-left li {
+  margin-bottom: 8px;
+}
+
+.newsletter input {
+  padding: 8px;
+  width: 200px;
+  margin-right: 10px;
+}
+
+.newsletter button {
+  padding: 8px 16px;
+  background-color: #466147;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 /*activities*/
