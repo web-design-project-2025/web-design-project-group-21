@@ -478,10 +478,13 @@ main {
 }
 
 /*login*/
-body {
+body.login-page {
+  background-image: url("img/image\ 4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f9f9f9;
 }
 
 .header {
