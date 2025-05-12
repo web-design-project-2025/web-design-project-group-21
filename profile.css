@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.header {
+  background-color: #A0C49D;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  height: 48px;
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+}
+
+.nav a {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 16px;
+}
+
+.profile-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.banner {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 24px;
+}
+
+.user-info {
+  display: flex;
+  gap: 20px;
+  background: #e8e8e8;
+  padding: 20px;
+  border-radius: 10px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  font-size: 60px;
+  background: #ccc;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-details h2 {
+  margin: 0;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+}
+
+.account-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.account-section ul {
+  list-style: none;
+  padding-left: 0;
+  color: #444;
+  font-size: 14px;
+}
+
+.account-section li {
+  margin-bottom: 8px;
+}

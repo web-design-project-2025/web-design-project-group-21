@@ -1,7 +1,7 @@
 :root {
-  --green: #273725;
-  --dark-green: #273725;
-  --light-gray: #273725;
+  --green: #a0c49d;
+  --dark-green: #a0c49d;
+  --light-gray: #a0c49d;
 }
 
 body {
@@ -96,8 +96,8 @@ main {
 }
 
 .ticket img {
-  width: 140px;
-  height: 100px;
+  width: 210px;
+  height: 150px;
   object-fit: cover;
   border-radius: 6px;
   margin-right: 20px;
@@ -109,17 +109,21 @@ main {
 
 .ticket-content h3 {
   margin: 0;
-  font-size: 16px;
+  margin-top: 25px;
+  font-size: 19px;
 }
 
 .ticket-content p {
-  font-size: 14px;
-  margin-top: 4px;
+  font-size: 17px;
+  margin-top: 8px;
 }
 
 .ticket-price {
   text-align: center;
   min-width: 150px;
+  margin-top: 38px;
+  font-size: 20px;
+  margin-right: 20px;
 }
 
 .ticket-price span {
@@ -129,21 +133,19 @@ main {
 }
 
 .ticket-price button {
-  background: var(--dark-green);
+  background-color: #5d7b57;
   color: white;
   border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
+  padding: 8px 20px;
+  font-size: 18px;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
-.favorite-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: var(--dark-green);
+.ticket-price button:hover {
+  transform: scale(1.08);
 }
 
 @media (max-width: 768px) {

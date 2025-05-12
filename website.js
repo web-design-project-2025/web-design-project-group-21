@@ -40,6 +40,10 @@ document.getElementById("view-all-btn").addEventListener("click", function () {
   window.location.href = "page2.html";
 });
 
+function searchTrips() {
+  window.location.href = "activities.html";
+}
+
 /*page 2*/
 const cities = ["stockholm", "goteborg"];
 

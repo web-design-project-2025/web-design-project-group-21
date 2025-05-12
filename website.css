@@ -27,7 +27,7 @@ header {
 
 .header-container {
   display: flex;
-  align-items: center;
+
   gap: 20px;
   color: white;
 }
@@ -46,6 +46,7 @@ header {
 
 .hero h1 {
   margin-bottom: 20px;
+  margin-left: 310px;
 }
 
 .search-bar {
@@ -56,8 +57,9 @@ header {
   gap: 12px;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1000px;
+  max-width: 800px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-left: 310px;
 }
 
 .search-bar input,
@@ -66,6 +68,7 @@ header {
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  margin-left: 10px;
 }
 
 .book-btn {
@@ -75,6 +78,7 @@ header {
   font-weight: bold;
   cursor: pointer;
   border: none;
+  margin-left: 36px;
 }
 
 .center-btn {
@@ -109,6 +113,21 @@ header {
 .card img {
   width: 100%;
   height: 140px;
+  object-fit: cover;
+}
+.card2 {
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-left: 80px;
+  margin-right: 16px;
+}
+
+.card2 img {
+  width: 100%;
+  height: 160px;
   object-fit: cover;
 }
 
@@ -169,6 +188,7 @@ header {
   }
 }
 
+amarubranch
 .footer-left,
 .footer-right {
   flex: 2;
@@ -370,7 +390,6 @@ main {
     flex-direction: column;
   }
 }
-
 /*cinemadeal*/
 body {
   margin: 0;
@@ -664,10 +683,13 @@ main {
 }
 
 /*login*/
-body {
+body.login-page {
+  background-image: url("img/image\ 4.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f9f9f9;
 }
 
 .header {
