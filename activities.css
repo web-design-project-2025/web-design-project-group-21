@@ -133,7 +133,7 @@ main {
 }
 
 .ticket-price button {
-  background: var(--dark-green);
+  background-color: #5d7b57;
   color: white;
   border: none;
   padding: 8px 20px;
