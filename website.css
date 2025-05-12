@@ -177,7 +177,7 @@ header {
   }
 }
 
-amarubranch .footer-left,
+.footer-left,
 .wide-pic {
   height: 500px;
   width: 2000px;
@@ -202,13 +202,15 @@ amarubranch .footer-left,
 
 .footer-right {
   max-width: 50%;
-  text-align: center; 
+  text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
 footer {
+  background-color: #5d7b57;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -217,7 +219,7 @@ footer {
 
 .newsletter {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   gap: 10px;
 }
 
@@ -836,15 +838,6 @@ body {
   line-height: 1.6;
   margin: 0;
   background-color: #fdfdfd;
-}
-
-header,
-footer {
-  background-color: #88b588;
-  color: white;
-  padding: 1em;
-  text-align: center;
-  display: flex;
 }
 
 .top-right {
