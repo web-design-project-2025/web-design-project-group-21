@@ -55,4 +55,5 @@ function removeItem(index) {
   renderCart();
 }
 
+
 renderCart();

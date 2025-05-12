@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+}
+
+.top-bar {
+  background-color: #99bb99;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.top-nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.profile {
+  font-size: 16px;
+  color: white;
+}
+
+main.confirmation {
+  background-color: #ece7e3;
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h1 {
+  color: #5e7d5e;
+}
+
+.ticket-block {
+  text-align: left;
+  margin: 20px 0;
+}
+
+.ticket-block2 {
+  text-align: left;
+  margin: 20px 0;
+  margin-left: 155px;
+  margin-bottom: 60px;
+}
+
+.ticket-block ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.ticket-block2 ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  line-height: 1.6;
+}
+
+.tickets {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+}
+
+.home-button {
+  display: inline-block;
+  background-color: #5e7d5e;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin-top: 30px;
+  transition: transform 0.2s ease;
+}
+
+.home-button:hover {
+  background-color: #4a6a4a;
+  transform: scale(1.08);
+}
