@@ -37,11 +37,35 @@ header {
 
 .header-container a,
 .header-container .lang-switch {
+  position: relative;
   color: white;
   text-decoration: none;
   cursor: pointer;
   font-size: 16px;
   align-items: center;
+  transition: color 0.3s ease;
+}
+
+.header-container a::after,
+.header-container .lang-switch::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; /* Adjust space between text and underline */
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.header-container a:hover,
+.header-container .lang-switch:hover {
+  color: #f0f0f0; /* Optional: lighter color on hover */
+}
+
+.header-container a:hover::after,
+.header-container .lang-switch:hover::after {
+  width: 100%;
 }
 
 .logo img {
@@ -750,20 +774,40 @@ body.login-page {
   height: 50px;
 }
 
-.navbar a {
-  margin: 0 12px;
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
 .navbar {
   flex: 1;
   display: flex;
   justify-content: center;
   margin-left: 70px;
+}
+
+.navbar a {
+  position: relative;
+  margin: 0 12px;
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover {
+  color: white;
+}
+
+.navbar a:hover::after {
+  width: 100%;
 }
 
 .lang-switch button {
@@ -882,12 +926,33 @@ body {
 }
 
 nav a {
+  position: relative;
   font-family: "Open Sans", sans-serif;
   margin: 0 1em;
   color: white;
   text-decoration: none;
   text-align: center;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: white;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 .editorial-posts {

@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: #f9f9f9;
   color: #334;
 }
 
 .header {
-  background: #A0C49D;
+  background: #a0c49d;
   padding: 12px 24px;
   display: flex;
   align-items: center;
@@ -26,9 +26,30 @@ body {
 }
 
 .nav a {
+  position: relative;
   color: white;
   text-decoration: none;
   font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px; 
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover {
+  color: white; 
+}
+
+.nav a:hover::after {
+  width: 100%;
 }
 
 .top-right {
@@ -98,7 +119,7 @@ body {
 }
 
 #faq-list li::before {
-  content: '⏺';
+  content: "⏺";
   font-size: 10px;
   color: #4d7c5b;
 }
