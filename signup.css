@@ -24,15 +24,18 @@ body.signup-page {
 .navbar a {
   margin: 0 12px;
   text-decoration: none;
-  color: #333;
+  color: white;
   font-weight: 500;
   font-weight: bold;
+  align-items: center;
 }
 
 .navbar {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-left: 70px;
 }
 
 .lang-switch button {
@@ -41,6 +44,7 @@ body.signup-page {
   font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  color: white;
 }
 
 .signup-container {
