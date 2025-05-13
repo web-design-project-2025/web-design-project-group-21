@@ -53,6 +53,12 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.ticket:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-7px);
 }
 
 .ticket .info {
