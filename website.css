@@ -199,7 +199,7 @@ header {
 
 .footer-left,
 .wide-pic {
-  height: 500px;
+  height: 250px;
   width: 2000px;
 }
 
@@ -226,6 +226,8 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin-right: 500px;
+  margin-top: 15px;
 }
 
 footer {
@@ -876,6 +878,7 @@ nav a {
   color: white;
   text-decoration: none;
   text-align: center;
+  font-weight: bold;
 }
 
 .editorial-posts {
