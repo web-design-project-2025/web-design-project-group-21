@@ -257,6 +257,13 @@ footer {
   color: white;
   border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.newsletter button:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 /*activities*/
@@ -843,6 +850,8 @@ body.login-page {
 
 .submit-btn:hover {
   background-color: #88b588;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
 }
 
 .signup-link {

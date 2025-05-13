@@ -123,4 +123,6 @@ body.signup-page {
 
 .submit-btn:hover {
   background-color: #88b588;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
