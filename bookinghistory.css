@@ -20,13 +20,18 @@ body {
 .top-nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
 .profile {
-  font-size: 16px;
+  display: flex;
+  align-items: center;
   color: white;
+}
+
+.profile span {
+  margin-right: 10px;
 }
 
 main.history {
