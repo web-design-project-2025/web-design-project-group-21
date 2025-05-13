@@ -118,7 +118,7 @@ body.signup-page {
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.4s ease;
 }
 
 .submit-btn:hover {
