@@ -51,7 +51,7 @@ header {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; /* Adjust space between text and underline */
+  bottom: -4px; 
   width: 0%;
   height: 2px;
   background-color: white;
@@ -60,7 +60,7 @@ header {
 
 .header-container a:hover,
 .header-container .lang-switch:hover {
-  color: #f0f0f0; /* Optional: lighter color on hover */
+  color: white;
 }
 
 .header-container a:hover::after,
