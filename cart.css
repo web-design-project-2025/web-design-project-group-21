@@ -1,12 +1,12 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: "Segoe UI", sans-serif;
   background: #fff;
   color: #333;
 }
 
 .header {
-  background-color: #A0C49D;
+  background-color: #a0c49d;
   padding: 12px 24px;
   display: flex;
   align-items: center;
@@ -23,13 +23,14 @@ body {
 }
 
 .nav a {
-  color: #333;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
 
 .top-right {
   font-size: 16px;
+  color: white;
 }
 
 .cart-container {
@@ -76,7 +77,8 @@ body {
   cursor: pointer;
 }
 
-.add-btn, .checkout-btn {
+.add-btn,
+.checkout-btn {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
@@ -93,6 +95,6 @@ body {
 }
 
 .checkout-btn {
-  background-color: #5E785F;
+  background-color: #5e785f;
   color: #fff;
 }
