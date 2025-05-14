@@ -46,7 +46,7 @@ function renderCart() {
 
 function editItem(index) {
   const item = cart[index];
-  window.location.href = item.link || 'spots.html';
+  window.location.href = item.link || 'Untitled-1.html';
 }
 
 function removeItem(index) {
