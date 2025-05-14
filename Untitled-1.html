@@ -28,7 +28,19 @@
       </nav>
       <div class="header-icons">
         <span onclick="alert('User Profile')" style="cursor: pointer">👤 My Profile</span>
-        <span onclick="alert('Cart is empty')" style="cursor: pointer">🛒</span>
+        <span id="cartIcon" style="cursor:pointer">🛒</span>
+
+<script>
+  document.getElementById("cartIcon").addEventListener("click", () => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    if (cart.length === 0) {
+      alert("Your cart is empty.");
+    } else {
+      window.location.href = "CART.html";
+    }
+  });
+</script>
+
       </div>
       <div style="position: absolute; right: 20px; top: 70px">
         <button onclick="switchLang()" id="lang-toggle">English / Swedish</button>
