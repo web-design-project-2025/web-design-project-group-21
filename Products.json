@@ -1,0 +1,52 @@
+[
+  {
+    "id": "cinema-stockholm",
+    "title": "Stockholm Cinema Deal",
+    "type": "Cinema",
+    "city": "Stockholm",
+    "price": 100,
+    "image": "img/stockholm.png",
+    "description": "Experience the latest movies in top cinemas across Sweden. Enjoy a wide selection of international blockbusters and local Swedish films in a comfortable, modern setting.",
+    "note": "Valid for one-time entry. Available in Stockholm, Gothenburg, Malmö, and more."
+  },
+  {
+    "id": "culture-goteborg",
+    "title": "Gothenburg Culture Trip",
+    "type": "Culture",
+    "city": "Goteborg",
+    "price": 850,
+    "image": "img/goteborg.png",
+    "description": "Explore Gothenburg’s art scene, exhibitions, and coastal views with a curated cultural tour.",
+    "note": "Includes museum access and guided walk."
+  },
+  {
+    "id": "bus-jonkoping",
+    "title": "Bus Trip to Stockholm",
+    "type": "Transport",
+    "city": "Jonkoping",
+    "price": 200,
+    "image": "img/jonkoping-bus.png",
+    "description": "Comfortable long-distance bus ride from Jonkoping to Stockholm with on-board amenities.",
+    "note": "Fixed-time departure, ticket valid on selected date."
+  },
+  {
+    "id": "overnight-stockholm",
+    "title": "Overnight Stay in Stockholm",
+    "type": "Stay",
+    "city": "Stockholm",
+    "price": 1350,
+    "image": "img/stockholm-hotel.png",
+    "description": "Book a charming overnight stay in the heart of Stockholm’s Old Town. Includes breakfast and WiFi.",
+    "note": "Check-in after 3pm, checkout before 11am."
+  },
+  {
+    "id": "bus-return",
+    "title": "Return Bus Trip to Jonkoping",
+    "type": "Transport",
+    "city": "Stockholm",
+    "price": 200,
+    "image": "img/stockholm-bus.png",
+    "description": "Return ticket from Stockholm to Jonkoping on a comfortable modern coach.",
+    "note": "Valid only on selected return date."
+  }
+]

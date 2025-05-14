@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GlobalGuide – Ticket Search</title>
+    <link rel="stylesheet" href="activities.css" />
+  </head>
+  <body>
+    <header>
+      <img src="img/logo.png" alt="logo" height="50" />
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Choose your city"
+          oninput="handleSearch(); showSuggestions()"
+          autocomplete="off"
+        />
+        <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+      </div>
+      <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="Untitled-1.html">Activities</a>
+        <a href="bookinghistory.html">My bookings</a>
+        <a href="helpcenter.html">Help center</a>
+        <a href="editorial.html">Insights</a>
+      </nav>
+      <div class="header-icons">
+        <span onclick="alert('User Profile')" style="cursor: pointer">👤 My Profile</span>
+        <span onclick="alert('Cart is empty')" style="cursor: pointer">🛒</span>
+      </div>
+      <div style="position: absolute; right: 20px; top: 70px">
+        <button onclick="switchLang()" id="lang-toggle">English / Swedish</button>
+      </div>
+    </header>
+
+    <section class="filters">
+      <select id="filterCity">
+        <option value="all">All Cities</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Goteborg">Goteborg</option>
+        <option value="Malmo">Malmo</option>
+        <option value="Jonkoping">Jonkoping</option>
+      </select>
+
+      <select id="filterPrice">
+        <option value="all">All Prices</option>
+        <option value="low">Below 500</option>
+        <option value="high">500+</option>
+      </select>
+
+      <select id="sortType">
+        <option value="default">Sort by</option>
+        <option value="priceAsc">Price: Low to High</option>
+        <option value="priceDesc">Price: High to Low</option>
+        <option value="alpha">Alphabetical</option>
+      </select>
+    </section>
+
+    <main class="activity-list" id="product-list">
+      <!-- dynamically loaded products -->
+    </main>
+
+    <script>
+      let allProducts = [];
+
+      async function loadActivities() {
+        const res = await fetch("products.json");
+        const data = await res.json();
+        allProducts = data;
+        renderProducts(data);
+      }
+
+      function renderProducts(list) {
+        const container = document.getElementById("product-list");
+        container.innerHTML = "";
+        list.forEach(p => {
+          const card = document.createElement("div");
+          card.className = "ticket";
+          card.innerHTML = `
+            <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
+            <h3>${p.title}</h3>
+            <p><strong>${p.price} SEK</strong></p>
+            <div style="text-align: right; margin-top: 10px">
+              <a href="details.html?id=${p.id}" class="book-btn">More Info</a>
+            </div>
+          `;
+          container.appendChild(card);
+        });
+      }
+
+      function applyFilters() {
+        let filtered = [...allProducts];
+        const city = document.getElementById("filterCity").value;
+        const price = document.getElementById("filterPrice").value;
+        const sort = document.getElementById("sortType").value;
+
+        if (city !== "all") {
+          filtered = filtered.filter(p => p.city === city);
+        }
+
+        if (price === "low") {
+          filtered = filtered.filter(p => p.price < 500);
+        } else if (price === "high") {
+          filtered = filtered.filter(p => p.price >= 500);
+        }
+
+        if (sort === "priceAsc") {
+          filtered.sort((a, b) => a.price - b.price);
+        } else if (sort === "priceDesc") {
+          filtered.sort((a, b) => b.price - a.price);
+        } else if (sort === "alpha") {
+          filtered.sort((a, b) => a.title.localeCompare(b.title));
+        }
+
+        renderProducts(filtered);
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        loadActivities();
+        document.getElementById("filterCity").addEventListener("change", applyFilters);
+        document.getElementById("filterPrice").addEventListener("change", applyFilters);
+        document.getElementById("sortType").addEventListener("change", applyFilters);
+      });
+    </script>
+  </body>
+</html>

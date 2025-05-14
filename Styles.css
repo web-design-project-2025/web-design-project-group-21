@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.top-bar {
+  background-color: #99bb99;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+}
+
+.top-nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profile {
+  font-size: 14px;
+  color: #fff;
+}
+
+.detail-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.detail-box {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.detail-img {
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.detail-info h1 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.detail-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.detail-info .note {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+}
+
+button#bookBtn {
+  background-color: #5e7d5e;
+  color: white;
+  padding: 10px 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+button#bookBtn:hover {
+  background-color: #4a6a4a;
+}
