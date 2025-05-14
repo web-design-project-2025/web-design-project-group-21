@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Arial, sans-serif;
   background: #f9f9f9;
   color: #334;
 }
@@ -37,7 +37,7 @@ body {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; 
+  bottom: -4px;
   width: 0%;
   height: 2px;
   background-color: white;
@@ -45,7 +45,7 @@ body {
 }
 
 .nav a:hover {
-  color: white; 
+  color: white;
 }
 
 .nav a:hover::after {
