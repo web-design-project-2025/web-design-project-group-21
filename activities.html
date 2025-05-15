@@ -8,7 +8,7 @@
   </head>
   <body>
     <header>
-      <img src="img/logo.png" alt="logo" height="50" />
+      <img src="img/logo-small.png" alt="logo" height="50" />
       <div class="search-box">
         <input
           type="text"
@@ -27,23 +27,26 @@
         <a href="editorial.html">Insights</a>
       </nav>
       <div class="header-icons">
-        <span onclick="alert('User Profile')" style="cursor: pointer">👤 My Profile</span>
-        <span id="cartIcon" style="cursor:pointer">🛒</span>
+        <span onclick="alert('User Profile')" style="cursor: pointer"
+          >👤 My Profile</span
+        >
+        <span id="cartIcon" style="cursor: pointer">🛒</span>
 
-<script>
-  document.getElementById("cartIcon").addEventListener("click", () => {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    if (cart.length === 0) {
-      alert("Your cart is empty.");
-    } else {
-      window.location.href = "CART.html";
-    }
-  });
-</script>
-
+        <script>
+          document.getElementById("cartIcon").addEventListener("click", () => {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            if (cart.length === 0) {
+              alert("Your cart is empty.");
+            } else {
+              window.location.href = "CART.html";
+            }
+          });
+        </script>
       </div>
       <div style="position: absolute; right: 20px; top: 70px">
-        <button onclick="switchLang()" id="lang-toggle">English / Swedish</button>
+        <button onclick="switchLang()" id="lang-toggle">
+          English / Swedish
+        </button>
       </div>
     </header>
 
@@ -87,7 +90,7 @@
       function renderProducts(list) {
         const container = document.getElementById("product-list");
         container.innerHTML = "";
-        list.forEach(p => {
+        list.forEach((p) => {
           const card = document.createElement("div");
           card.className = "ticket";
           card.innerHTML = `
@@ -109,13 +112,13 @@
         const sort = document.getElementById("sortType").value;
 
         if (city !== "all") {
-          filtered = filtered.filter(p => p.city === city);
+          filtered = filtered.filter((p) => p.city === city);
         }
 
         if (price === "low") {
-          filtered = filtered.filter(p => p.price < 500);
+          filtered = filtered.filter((p) => p.price < 500);
         } else if (price === "high") {
-          filtered = filtered.filter(p => p.price >= 500);
+          filtered = filtered.filter((p) => p.price >= 500);
         }
 
         if (sort === "priceAsc") {
@@ -131,9 +134,15 @@
 
       document.addEventListener("DOMContentLoaded", () => {
         loadActivities();
-        document.getElementById("filterCity").addEventListener("change", applyFilters);
-        document.getElementById("filterPrice").addEventListener("change", applyFilters);
-        document.getElementById("sortType").addEventListener("change", applyFilters);
+        document
+          .getElementById("filterCity")
+          .addEventListener("change", applyFilters);
+        document
+          .getElementById("filterPrice")
+          .addEventListener("change", applyFilters);
+        document
+          .getElementById("sortType")
+          .addEventListener("change", applyFilters);
       });
     </script>
   </body>
