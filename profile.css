@@ -32,10 +32,10 @@ body {
 }
 
 .nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
-  bottom: -4px; 
+  bottom: -4px;
   width: 0%;
   height: 2px;
   background-color: white;
@@ -49,7 +49,6 @@ body {
 .nav a:hover::after {
   width: 100%;
 }
-
 
 .top-right {
   display: flex;
@@ -120,32 +119,83 @@ body {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav, .nav, .header-icons, .profile, .top-right {
+  .top-nav,
+  .nav,
+  .header-icons,
+  .profile,
+  .top-right {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
   }
 
-  .ticket, .checkout-grid, .detail-box, .cart-container {
+  .header {
+    flex-direction: column;
+    align-items: stretch; /* full width */
+    padding: 16px;
+  }
+
+  .logo {
+    height: 40px;
+    margin-bottom: 16px;
+    align-self: flex-start; /* keep logo left */
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    margin-bottom: 16px;
+    align-items: center; /* center nav links */
+  }
+
+  .nav a {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .top-right {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+    gap: 12px;
+  }
+
+  .ticket,
+  .checkout-grid,
+  .detail-box,
+  .cart-container {
     flex-direction: column !important;
   }
 
-  .signup-container, .login-container, .summary-block, .form-block {
+  .signup-container,
+  .login-container,
+  .summary-block,
+  .form-block {
     padding: 20px !important;
   }
 
-  .search-bar, .filters, .card, .ticket, .deal-card {
+  .search-bar,
+  .filters,
+  .card,
+  .ticket,
+  .deal-card {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  .ticket img, .card img, .deal-img img, #cart-items img {
+  .ticket img,
+  .card img,
+  .deal-img img,
+  #cart-items img {
     width: 100% !important;
     height: auto !important;
   }
 
-  .ticket-price, .ticket-content {
+  .ticket-price,
+  .ticket-content {
     text-align: left !important;
     margin-top: 10px !important;
   }

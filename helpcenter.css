@@ -125,32 +125,96 @@ body {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav, .nav, .header-icons, .profile, .top-right {
+  .top-nav,
+  .nav,
+  .header-icons,
+  .profile,
+  .top-right {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
   }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+  }
 
-  .ticket, .checkout-grid, .detail-box, .cart-container {
+  .logo {
+    height: 40px;
+    margin-bottom: 12px;
+    align-self: flex-start;
+  }
+
+  .nav {
+    flex: unset;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .nav a {
+    font-size: 16px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .top-right {
+    width: 100%;
+    justify-content: center;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav a {
+    font-size: 14px;
+  }
+
+  .logo {
+    height: 36px;
+  }
+
+  .top-right {
+    font-size: 13px;
+  }
+
+  .ticket,
+  .checkout-grid,
+  .detail-box,
+  .cart-container {
     flex-direction: column !important;
   }
 
-  .signup-container, .login-container, .summary-block, .form-block {
+  .signup-container,
+  .login-container,
+  .summary-block,
+  .form-block {
     padding: 20px !important;
   }
 
-  .search-bar, .filters, .card, .ticket, .deal-card {
+  .search-bar,
+  .filters,
+  .card,
+  .ticket,
+  .deal-card {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  .ticket img, .card img, .deal-img img, #cart-items img {
+  .ticket img,
+  .card img,
+  .deal-img img,
+  #cart-items img {
     width: 100% !important;
     height: auto !important;
   }
 
-  .ticket-price, .ticket-content {
+  .ticket-price,
+  .ticket-content {
     text-align: left !important;
     margin-top: 10px !important;
   }
