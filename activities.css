@@ -18,6 +18,12 @@ header {
   justify-content: space-between;
 }
 
+.note {
+  white-space: normal;
+  margin-top: 40px;
+  color: #444;
+}
+
 .search-box {
   flex: 1;
   margin: 0 20px;
@@ -113,16 +119,27 @@ main {
   align-items: center;
 }
 
+.filters select {
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 6px;
+  color: #555c5a;
+  margin-right: 15px;
+  cursor: pointer;
+  min-width: 120px;
+  margin-top: 20px;
+}
+
 .filters button {
   background: none;
   border: none;
-  font-size: 16px;
+  font-size: 40px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
 }
 
 .filters button.active {
-  border-color: var(--dark-green);
+  border-color: #555c5a;
   font-weight: bold;
 }
 
@@ -132,8 +149,8 @@ main {
   display: flex;
   border-radius: 10px;
   margin-bottom: 20px;
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 50px;
+  margin-right: 50px;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
 }
@@ -172,7 +189,7 @@ main {
   min-width: 150px;
   margin-top: 38px;
   font-size: 20px;
-  margin-right: 20px;
+  margin-right: 100px;
 }
 
 .ticket-price span {
@@ -182,7 +199,7 @@ main {
 }
 
 .ticket-price button {
-  background-color: #5d7b57;
+  background-color: #7b576b;
   color: white;
   border: none;
   padding: 8px 20px;
@@ -220,32 +237,50 @@ main {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav, .nav, .header-icons, .profile, .top-right {
+  .top-nav,
+  .nav,
+  .header-icons,
+  .profile,
+  .top-right {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
   }
 
-  .ticket, .checkout-grid, .detail-box, .cart-container {
+  .ticket,
+  .checkout-grid,
+  .detail-box,
+  .cart-container {
     flex-direction: column !important;
   }
 
-  .signup-container, .login-container, .summary-block, .form-block {
+  .signup-container,
+  .login-container,
+  .summary-block,
+  .form-block {
     padding: 20px !important;
   }
 
-  .search-bar, .filters, .card, .ticket, .deal-card {
+  .search-bar,
+  .filters,
+  .card,
+  .ticket,
+  .deal-card {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  .ticket img, .card img, .deal-img img, #cart-items img {
+  .ticket img,
+  .card img,
+  .deal-img img,
+  #cart-items img {
     width: 100% !important;
     height: auto !important;
   }
 
-  .ticket-price, .ticket-content {
+  .ticket-price,
+  .ticket-content {
     text-align: left !important;
     margin-top: 10px !important;
   }
