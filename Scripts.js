@@ -41,6 +41,6 @@ async function loadProductDetail() {
   });
 }
 
-if (window.location.pathname.includes("details.html")) {
+if (window.location.pathname.toLowerCase().includes("details.html")) {
   window.addEventListener("DOMContentLoaded", loadProductDetail);
 }
