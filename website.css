@@ -201,6 +201,13 @@ header {
   margin-left: 10px;
 }
 
+.wide-pic {
+  height: 300px;
+  width: auto;
+  display: block;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
   .ticket {
     flex-direction: column;
@@ -218,16 +225,29 @@ header {
     gap: 12px;
   }
 
+  .wide-pic {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
   .header-container a,
   .header-container .lang-switch {
     font-size: 14px;
     margin: 4px 0;
+    padding-top: 100px;
+    padding-bottom: 0px;
   }
 
   .logo img {
-    height: 120px;
+    height: 150px !important;
     margin: 0 auto;
     display: block;
+  }
+
+  .hero {
+    justify-content: center;
   }
 
   .hero h1 {

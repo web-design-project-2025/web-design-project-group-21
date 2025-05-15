@@ -182,7 +182,7 @@ body {
   }
 
   .top-bar .logo img {
-    height: 32px; 
+    height: 32px;
     margin-bottom: 10px;
   }
 
@@ -205,46 +205,26 @@ body {
     margin-top: 10px;
   }
 
-  .ticket,
-  .checkout-grid,
-  .detail-box,
-  .cart-container {
-    flex-direction: column !important;
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
   }
 
-  .signup-container,
-  .login-container,
-  .summary-block,
-  .form-block {
-    padding: 20px !important;
+  .form-block,
+  .summary-block {
+    padding: 1rem;
   }
 
-  .search-bar,
-  .filters,
-  .card,
-  .ticket,
-  .deal-card {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .name-fields,
+  .guest-selectors {
+    flex-direction: column;
+    gap: 0.75rem;
   }
 
-  .ticket img,
-  .card img,
-  .deal-img img,
-  #cart-items img {
-    width: 100% !important;
-    height: auto !important;
-  }
-
-  .ticket-price,
-  .ticket-content {
-    text-align: left !important;
-    margin-top: 10px !important;
-  }
-
-  .autocomplete-suggestions {
-    max-height: 120px !important;
-    font-size: 14px !important;
+  .book-btn {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
   }
 }
