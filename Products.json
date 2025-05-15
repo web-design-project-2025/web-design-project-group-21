@@ -6,7 +6,7 @@
     "city": "Stockholm",
     "price": 100,
     "image": "img/stockholm.png",
-    "description": "Experience the latest movies in top cinemas across Sweden. Enjoy a wide selection of international blockbusters and local Swedish films in a comfortable, modern setting.",
+    "description": "Experience the latest movies in top cinemas across Sweden. Enjoy a wide selection of international blockbusters and local Swedish films in a comfortable, modern setting",
     "note": "Valid for one-time entry. Available in Stockholm, Gothenburg, Malmö, and more."
   },
   {
@@ -20,33 +20,33 @@
     "note": "Includes museum access and guided walk."
   },
   {
-    "id": "bus-jonkoping",
-    "title": "Bus Trip to Stockholm",
-    "type": "Transport",
+    "id": "cinema-jonkoping",
+    "title": "Jonkoping Cinema Deal",
+    "type": "Cinema",
     "city": "Jonkoping",
     "price": 200,
     "image": "img/jonkoping-bus.png",
-    "description": "Comfortable long-distance bus ride from Jonkoping to Stockholm with on-board amenities.",
+    "description": " Enjoy the latest films at the cozy Bio Roxy or catch a special screening at Filmstaden Jönköping. ",
     "note": "Fixed-time departure, ticket valid on selected date."
   },
   {
-    "id": "overnight-stockholm",
-    "title": "Overnight Stay in Stockholm",
-    "type": "Stay",
-    "city": "Stockholm",
+    "id": "culture-Malmo",
+    "title": "Malmo Culture Trip",
+    "type": "Culture",
+    "city": "Malmo",
     "price": 1350,
     "image": "img/stockholm-hotel.png",
-    "description": "Book a charming overnight stay in the heart of Stockholm’s Old Town. Includes breakfast and WiFi.",
+    "description": "Explore the Malmö Art Museum, stroll through the charming Gamla Staden (Old Town), or visit the impressive Turning Torso skyscraper. ",
     "note": "Check-in after 3pm, checkout before 11am."
   },
   {
-    "id": "bus-return",
-    "title": "Return Bus Trip to Jonkoping",
-    "type": "Transport",
-    "city": "Stockholm",
+    "id": "culture-Uppsala",
+    "title": "Uppsala Culture Trip",
+    "type": "Culture",
+    "city": "Uppsala",
     "price": 200,
     "image": "img/stockholm-bus.png",
-    "description": "Return ticket from Stockholm to Jonkoping on a comfortable modern coach.",
+    "description": "Visit the iconic Uppsala Cathedral, explore the Gustavianum museum, or stroll through the beautiful botanical gardens. ",
     "note": "Valid only on selected return date."
   }
 ]
