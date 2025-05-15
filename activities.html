@@ -81,7 +81,7 @@
       let allProducts = [];
 
       async function loadActivities() {
-        const res = await fetch("products.json");
+        const res = await fetch("Products.json");
         const data = await res.json();
         allProducts = data;
         renderProducts(data);
