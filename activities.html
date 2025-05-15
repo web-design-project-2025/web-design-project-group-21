@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GlobalGuide – Ticket Search</title>
     <link rel="stylesheet" href="activities.css" />
+    <script defer src="activities.js"></script>
   </head>
   <body>
     <header>
@@ -31,23 +32,8 @@
           >👤 My Profile</span
         >
         <span id="cartIcon" style="cursor: pointer">🛒</span>
-
-        <script>
-          document.getElementById("cartIcon").addEventListener("click", () => {
-            const cart = JSON.parse(localStorage.getItem("cart")) || [];
-            if (cart.length === 0) {
-              alert("Your cart is empty.");
-            } else {
-              window.location.href = "CART.html";
-            }
-          });
-        </script>
       </div>
-      <div style="position: absolute; right: 20px; top: 70px">
-        <button onclick="switchLang()" id="lang-toggle">
-          English / Swedish
-        </button>
-      </div>
+      <div style="position: absolute; right: 20px; top: 70px"></div>
     </header>
 
     <section class="filters">
@@ -57,6 +43,7 @@
         <option value="Goteborg">Goteborg</option>
         <option value="Malmo">Malmo</option>
         <option value="Jonkoping">Jonkoping</option>
+        <option value="Uppsala">Uppsala</option>
       </select>
 
       <select id="filterPrice">
@@ -74,76 +61,6 @@
     </section>
 
     <main class="activity-list" id="product-list">
-      <!-- dynamically loaded products -->
     </main>
-
-    <script>
-      let allProducts = [];
-
-      async function loadActivities() {
-        const res = await fetch("Products.json");
-        const data = await res.json();
-        allProducts = data;
-        renderProducts(data);
-      }
-
-      function renderProducts(list) {
-        const container = document.getElementById("product-list");
-        container.innerHTML = "";
-        list.forEach((p) => {
-          const card = document.createElement("div");
-          card.className = "ticket";
-          card.innerHTML = `
-            <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
-            <h3>${p.title}</h3>
-            <p><strong>${p.price} SEK</strong></p>
-            <div style="text-align: right; margin-top: 10px">
-              <a href="details.html?id=${p.id}" class="book-btn">More Info</a>
-            </div>
-          `;
-          container.appendChild(card);
-        });
-      }
-
-      function applyFilters() {
-        let filtered = [...allProducts];
-        const city = document.getElementById("filterCity").value;
-        const price = document.getElementById("filterPrice").value;
-        const sort = document.getElementById("sortType").value;
-
-        if (city !== "all") {
-          filtered = filtered.filter((p) => p.city === city);
-        }
-
-        if (price === "low") {
-          filtered = filtered.filter((p) => p.price < 500);
-        } else if (price === "high") {
-          filtered = filtered.filter((p) => p.price >= 500);
-        }
-
-        if (sort === "priceAsc") {
-          filtered.sort((a, b) => a.price - b.price);
-        } else if (sort === "priceDesc") {
-          filtered.sort((a, b) => b.price - a.price);
-        } else if (sort === "alpha") {
-          filtered.sort((a, b) => a.title.localeCompare(b.title));
-        }
-
-        renderProducts(filtered);
-      }
-
-      document.addEventListener("DOMContentLoaded", () => {
-        loadActivities();
-        document
-          .getElementById("filterCity")
-          .addEventListener("change", applyFilters);
-        document
-          .getElementById("filterPrice")
-          .addEventListener("change", applyFilters);
-        document
-          .getElementById("sortType")
-          .addEventListener("change", applyFilters);
-      });
-    </script>
   </body>
 </html>
