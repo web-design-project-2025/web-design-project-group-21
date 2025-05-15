@@ -112,38 +112,82 @@ h1 {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav, .nav, .header-icons, .profile, .top-right {
+  .top-nav,
+  .nav,
+  .header-icons,
+  .profile,
+  .top-right {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
   }
-
-  .ticket, .checkout-grid, .detail-box, .cart-container {
-    flex-direction: column !important;
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px;
   }
 
-  .signup-container, .login-container, .summary-block, .form-block {
-    padding: 20px !important;
+  .logo img {
+    height: 32px;
+    margin-bottom: 10px;
   }
 
-  .search-bar, .filters, .card, .ticket, .deal-card {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-bottom: 10px;
   }
 
-  .ticket img, .card img, .deal-img img, #cart-items img {
-    width: 100% !important;
-    height: auto !important;
+  .top-nav a {
+    margin: 0;
+    font-size: 16px;
   }
 
-  .ticket-price, .ticket-content {
-    text-align: left !important;
-    margin-top: 10px !important;
+  .profile {
+    font-size: 14px;
+    margin-top: 10px;
   }
 
-  .autocomplete-suggestions {
-    max-height: 120px !important;
-    font-size: 14px !important;
+  main.confirmation {
+    padding: 20px 15px;
+    margin: 15px;
+    max-width: 100%;
+  }
+
+  .tickets {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .ticket-block2 {
+    margin-left: 0;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ticket-block {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .ticket-block ul,
+  .ticket-block2 ul {
+    padding-left: 15px;
+  }
+
+  .home-button {
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
   }
 }

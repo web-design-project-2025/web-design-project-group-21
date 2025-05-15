@@ -22,6 +22,7 @@ body {
 
 .top-bar .logo img {
   height: 40px;
+  color: white;
 }
 
 .top-nav a {
@@ -164,38 +165,66 @@ body {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav, .nav, .header-icons, .profile, .top-right {
+  .top-nav,
+  .nav,
+  .header-icons,
+  .profile,
+  .top-right {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
   }
 
-  .ticket, .checkout-grid, .detail-box, .cart-container {
-    flex-direction: column !important;
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
   }
 
-  .signup-container, .login-container, .summary-block, .form-block {
-    padding: 20px !important;
+  .top-bar .logo img {
+    height: 32px;
+    margin-bottom: 10px;
   }
 
-  .search-bar, .filters, .card, .ticket, .deal-card {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+  .top-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%;
+    margin: 10px 0;
   }
 
-  .ticket img, .card img, .deal-img img, #cart-items img {
-    width: 100% !important;
-    height: auto !important;
+  .top-nav a {
+    margin: 0;
+    font-size: 16px;
   }
 
-  .ticket-price, .ticket-content {
-    text-align: left !important;
-    margin-top: 10px !important;
+  .profile {
+    font-size: 0.9rem;
+    margin-top: 10px;
   }
 
-  .autocomplete-suggestions {
-    max-height: 120px !important;
-    font-size: 14px !important;
+  .checkout-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .form-block,
+  .summary-block {
+    padding: 1rem;
+  }
+
+  .name-fields,
+  .guest-selectors {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .book-btn {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
   }
 }

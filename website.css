@@ -15,13 +15,14 @@ body {
 }
 
 .hero {
-  background-color: var(--green);
+  background-color: #a0c49d;
   padding: 40px 20px 20px;
   color: white;
   text-align: left;
 }
+
 header {
-  background-color: #000;
+  background-color: #a0c49d;
   padding: 10px 20px;
   align-items: center;
 }
@@ -33,6 +34,7 @@ header {
   margin-left: auto;
   align-items: center;
   font-weight: bold;
+  justify-content: flex-end;
 }
 
 .header-container a,
@@ -199,10 +201,92 @@ header {
   margin-left: 10px;
 }
 
+.wide-pic {
+  height: 300px;
+  width: auto;
+  display: block;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
   .ticket {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .header {
+    padding: 10px 12px;
+  }
+
+  .header-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+    gap: 12px;
+  }
+
+  .wide-pic {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .header-container a,
+  .header-container .lang-switch {
+    font-size: 14px;
+    margin: 4px 0;
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+
+  .logo img {
+    height: 150px !important;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .hero {
+    justify-content: center;
+  }
+
+  .hero h1 {
+    margin-left: 0;
+    text-align: center;
+    font-size: 1.6rem;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 8px;
+    justify-content: center;
+    gap: 8px;
+    margin-right: 10px;
+  }
+
+  .center-btn {
+    margin-top: 40px;
+    padding: 6px 16px;
+    width: 100%;
+  }
+
+  .search-bar input,
+  .search-bar select {
+    margin-left: 0;
+    flex: 1 1 100%;
+    font-size: 14px;
+  }
+
+  .book-btn {
+    margin-left: 0;
+    width: 30%;
+    padding: 10px 0;
+    font-size: 16px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .ticket img {
@@ -289,468 +373,6 @@ footer {
   transform: scale(1.05);
 }
 
-/*activities*/
-:root {
-  --green: #273725;
-  --dark-green: #5e785f;
-  --light-gray: #e0e0e0;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
-
-header {
-  background: var(--green);
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.search-box {
-  flex: 1;
-  margin: 0 20px;
-  position: relative;
-}
-
-.search-box input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 16px;
-}
-
-.autocomplete-suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 999;
-}
-
-.autocomplete-suggestions div {
-  padding: 8px;
-  cursor: pointer;
-}
-
-.autocomplete-suggestions div:hover {
-  background-color: #eee;
-}
-
-.header-icons {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  color: white;
-  font-size: 14px;
-}
-
-main {
-  padding: 20px;
-}
-
-.filters {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-}
-
-.filters button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-}
-
-.filters button.active {
-  border-color: var(--dark-green);
-  font-weight: bold;
-}
-
-.ticket {
-  background: #eee;
-  padding: 10px;
-  display: flex;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-.ticket img {
-  width: 140px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 20px;
-}
-
-.ticket-content {
-  flex: 1;
-}
-
-.ticket-content h3 {
-  margin: 0;
-  font-size: 16px;
-}
-
-.ticket-content p {
-  font-size: 14px;
-  margin-top: 4px;
-}
-
-.ticket-price {
-  text-align: center;
-  min-width: 150px;
-}
-
-.ticket-price span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.ticket-price button {
-  background: var(--dark-green);
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.favorite-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: var(--dark-green);
-}
-
-@media (max-width: 768px) {
-  .ticket {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .ticket img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-
-  .ticket-price {
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .header-icons {
-    flex-direction: column;
-  }
-}
-/*cinemadeal*/
-body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background-color: #f7f7f7;
-  color: #222;
-}
-
-.header {
-  background-color: #a0c49d;
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  height: 50px;
-}
-
-.search-container {
-  flex: 1;
-  margin: 0 20px;
-  position: relative;
-}
-
-.search-container input {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 8px;
-  border: none;
-  font-size: 16px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.autocomplete-suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-top: none;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 1000;
-}
-
-.autocomplete-suggestions div {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.autocomplete-suggestions div:hover {
-  background-color: #eee;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-}
-
-.icon2 {
-  font-size: 20px;
-  cursor: pointer;
-}
-
-#lang-toggle {
-  background: transparent;
-  border: none;
-  font-size: 14px;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-main {
-  padding: 40px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.deal-container {
-  max-width: 1000px;
-  width: 100%;
-}
-
-.deal-card {
-  background: #eae7e2;
-  display: flex;
-  justify-content: space-between;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.deal-text {
-  flex: 1 1 300px;
-}
-
-.deal-text h1 {
-  margin-top: 0;
-  font-size: 26px;
-}
-
-.deal-text p {
-  margin: 10px 0;
-  font-size: 16px;
-  line-height: 1.5;
-}
-
-.add-btn {
-  background-color: #5e785f;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 14px;
-  margin-top: 20px;
-  cursor: pointer;
-}
-
-.add-btn:hover {
-  background-color: #4a624c;
-}
-
-.deal-img img {
-  width: 300px;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-@media (max-width: 768px) {
-  .deal-card {
-    flex-direction: column;
-    align-items: center;
-  }
-  .deal-img img {
-    width: 100%;
-  }
-}
-
-:root {
-  --green: #a0c49d;
-  --dark-green: #5e785f;
-  --light-gray: #e0e0e0;
-}
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-}
-header {
-  background: var(--green);
-  padding: 10px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.search-box {
-  flex: 1;
-  margin: 0 20px;
-  position: relative;
-}
-.search-box input {
-  width: 100%;
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  font-size: 16px;
-}
-.header-icons {
-  display: flex;
-  gap: 16px;
-  align-items: center;
-  color: white;
-  font-size: 14px;
-}
-main {
-  padding: 20px;
-}
-.filters {
-  display: flex;
-  gap: 30px;
-  margin-bottom: 20px;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 10px;
-}
-.filters button {
-  background: none;
-  border: none;
-  font-size: 16px;
-  cursor: pointer;
-  border-bottom: 2px solid transparent;
-}
-.filters button.active {
-  border-color: var(--dark-green);
-  font-weight: bold;
-}
-.ticket {
-  background: #eee;
-  padding: 10px;
-  display: flex;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-.ticket img {
-  width: 140px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 20px;
-}
-.ticket-content {
-  flex: 1;
-}
-.ticket-content h3 {
-  margin: 0;
-  font-size: 16px;
-}
-.ticket-content p {
-  font-size: 14px;
-  margin-top: 4px;
-}
-.ticket-price {
-  text-align: center;
-  min-width: 150px;
-}
-.ticket-price span {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.ticket-price button {
-  background: var(--dark-green);
-  color: white;
-  border: none;
-  padding: 6px 12px;
-  border-radius: 4px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.autocomplete-suggestions {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  max-height: 150px;
-  overflow-y: auto;
-  z-index: 999;
-}
-.autocomplete-suggestions div {
-  padding: 8px;
-  cursor: pointer;
-}
-.autocomplete-suggestions div:hover {
-  background-color: #eee;
-}
-.favorite-btn {
-  background: none;
-  border: none;
-  font-size: 20px;
-  cursor: pointer;
-  color: var(--dark-green);
-}
-
-@media (max-width: 768px) {
-  .ticket {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .ticket img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-  }
-  .ticket-price {
-    text-align: left;
-    margin-top: 10px;
-  }
-  .header-icons {
-    flex-direction: column;
-  }
-}
-
 /*login*/
 body.login-page {
   background-image: url("img/Background.png");
@@ -788,6 +410,7 @@ body.login-page {
   color: white;
   font-weight: bold;
   transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .navbar a::after {
@@ -909,6 +532,51 @@ body.login-page {
   text-decoration: underline;
 }
 
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+    margin-left: 0;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .navbar a {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    font-size: 16px;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  .navbar a::after {
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transition: width 0.3s ease;
+  }
+
+  .navbar a:hover::after {
+    width: 100%;
+  }
+}
+
 /*editorial page*/
 body {
   font-family: "Arial", sans-serif;
@@ -989,32 +657,82 @@ nav a:hover::after {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav, .nav, .header-icons, .profile, .top-right {
+  .top-nav,
+  .nav,
+  .header-icons,
+  .profile,
+  .top-right {
     flex-direction: column !important;
     align-items: flex-start !important;
     gap: 10px !important;
   }
+  .top-bar {
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    padding: 12px 16px;
+  }
 
-  .ticket, .checkout-grid, .detail-box, .cart-container {
+  .logo img {
+    height: 40px;
+    margin-bottom: 12px; /* Space below logo */
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: center; /* Center nav links */
+    margin-bottom: 12px;
+  }
+
+  nav a {
+    margin: 0;
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .top-right {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+  }
+
+  .ticket,
+  .checkout-grid,
+  .detail-box,
+  .cart-container {
     flex-direction: column !important;
   }
 
-  .signup-container, .login-container, .summary-block, .form-block {
+  .signup-container,
+  .login-container,
+  .summary-block,
+  .form-block {
     padding: 20px !important;
   }
 
-  .search-bar, .filters, .card, .ticket, .deal-card {
+  .search-bar,
+  .filters,
+  .card,
+  .ticket,
+  .deal-card {
     width: 100% !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
   }
 
-  .ticket img, .card img, .deal-img img, #cart-items img {
+  .ticket img,
+  .card img,
+  .deal-img img,
+  #cart-items img {
     width: 100% !important;
     height: auto !important;
   }
 
-  .ticket-price, .ticket-content {
+  .ticket-price,
+  .ticket-content {
     text-align: left !important;
     margin-top: 10px !important;
   }

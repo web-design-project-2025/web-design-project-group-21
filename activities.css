@@ -242,23 +242,56 @@ main {
   .header-icons,
   .profile,
   .top-right {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
+    flex-direction: column ;
+    align-items: flex-start ;
+    gap: 10px ;
   }
+
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+    }
+
+    .top-nav {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-right: 0;
+      margin-top: 10px;
+    }
+
+    .top-nav a {
+      margin: 5px 0;
+      font-size: 16px;
+    }
+
+    .search-box {
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .search-box input {
+      width: 90%; 
+      padding: 8px; 
+      font-size: 14px; 
+      margin-left: 0; 
+    }
+  }
+
 
   .ticket,
   .checkout-grid,
   .detail-box,
   .cart-container {
-    flex-direction: column !important;
+    flex-direction: column ;
   }
 
   .signup-container,
   .login-container,
   .summary-block,
   .form-block {
-    padding: 20px !important;
+    padding: 20px ;
   }
 
   .search-bar,
@@ -266,27 +299,27 @@ main {
   .card,
   .ticket,
   .deal-card {
-    width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    width: 100% ;
+    margin-left: 0 ;
+    margin-right: 0 ;
   }
 
   .ticket img,
   .card img,
   .deal-img img,
   #cart-items img {
-    width: 100% !important;
-    height: auto !important;
+    width: 100% ;
+    height: auto ;
   }
 
   .ticket-price,
   .ticket-content {
-    text-align: left !important;
-    margin-top: 10px !important;
+    text-align: left;
+    margin-top: 10px ;
   }
 
   .autocomplete-suggestions {
-    max-height: 120px !important;
-    font-size: 14px !important;
+    max-height: 120px ;
+    font-size: 14px ;
   }
 }
