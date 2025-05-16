@@ -18,6 +18,11 @@ body {
   height: 48px;
 }
 
+.top-right a {
+  text-decoration: none;
+  color: white;
+}
+
 .nav {
   display: flex;
   gap: 20px;

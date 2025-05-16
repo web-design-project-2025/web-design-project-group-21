@@ -49,6 +49,12 @@ body {
   display: flex;
   align-items: center;
   color: white;
+  gap: 10px;
+}
+
+.profile a {
+  text-decoration: none;
+  color: white;
 }
 
 .profile span {

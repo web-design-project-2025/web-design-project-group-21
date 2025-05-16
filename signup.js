@@ -21,8 +21,14 @@ function register(event) {
     return;
   }
 
-  if (password.length < 7 || !/\d/.test(password) || !/[a-zA-Z]/.test(password)) {
-    alert("Password must be at least 7 characters long and contain letters and a number.");
+  if (
+    password.length < 7 ||
+    !/\d/.test(password) ||
+    !/[a-zA-Z]/.test(password)
+  ) {
+    alert(
+      "Password must be at least 7 characters long and contain letters and a number."
+    );
     return;
   }
 
@@ -45,7 +51,7 @@ function switchLang() {
       offers: "I'd like to receive personalized offers...",
       terms: "By registering, I confirm that I accept the terms...",
       button: "Sign me up!",
-      toggle: "English / Swedish"
+      toggle: "English / Swedish",
     },
     sv: {
       signup: "Skapa konto",
@@ -55,8 +61,8 @@ function switchLang() {
       offers: "Jag vill få personliga erbjudanden...",
       terms: "Genom att registrera mig godkänner jag villkoren...",
       button: "Registrera mig!",
-      toggle: "Svenska / Engelska"
-    }
+      toggle: "Svenska / Engelska",
+    },
   };
 
   const lang = t[current];
@@ -68,4 +74,15 @@ function switchLang() {
   document.getElementById("offers-label").textContent = lang.offers;
   document.getElementById("terms-label").textContent = lang.terms;
   document.getElementById("submit-btn").textContent = lang.button;
+}
+
+function togglePassword() {
+  const pw = document.getElementById("password");
+  pw.type = pw.type === "password" ? "text" : "password";
+}
+function switchLang() {
+  const btn = document.getElementById("lang-toggle");
+  btn.textContent = btn.textContent.includes("English")
+    ? "Svenska / Engelska"
+    : "English / Swedish";
 }
