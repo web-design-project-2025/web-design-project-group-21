@@ -82,7 +82,7 @@ header {
 
 .hero h1 {
   margin-bottom: 20px;
-  margin-left: 310px;
+  margin-left: 380px;
   margin-top: 50px;
 }
 
@@ -96,13 +96,13 @@ header {
   flex-wrap: wrap;
   max-width: 800px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
-  margin-left: 310px;
+  margin-left: 380px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .search-bar:hover {
-  transform: scale(1.02); /* Slightly enlarges on hover */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Darkens the shadow */
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-bar input,
@@ -579,7 +579,7 @@ body.login-page {
 }
 
 footer {
-  margin-top: 50px;
+  margin-top: 300px;
   background-color: #5d7b57;
   color: white;
   display: flex;

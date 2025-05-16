@@ -4,28 +4,22 @@ async function loadActivities() {
   const res = await fetch("Products.json");
   const data = await res.json();
   allProducts = data;
-  renderProducts(data, false); // Don't show descriptions on first load
+  renderProducts(data);
 }
 
-function renderProducts(list, showDescription = true) {
+function renderProducts(list) {
   const container = document.getElementById("product-list");
   container.innerHTML = "";
 
   list.forEach((p) => {
-    const descriptionHTML =
-      showDescription && p.description
-        ? `<p class="description">${p.description}</p>`
-        : "";
-
     const card = document.createElement("div");
     card.className = "ticket";
     card.innerHTML = `
-    <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
-    <div
-      <h3>${p.title}</h3>
+      <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
+      <div>
+        <h3>${p.title}</h3>
       </div>
-    
-      ${descriptionHTML}
+
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
         <p style="margin: 8px 0;"><strong>${p.price} SEK</strong></p>
         <a href="details.html?id=${p.id}" class="book-btn">More Info</a>
@@ -59,7 +53,7 @@ function applyFilters() {
     filtered.sort((a, b) => a.title.localeCompare(b.title));
   }
 
-  renderProducts(filtered, true); // Show descriptions when filters are applied
+  renderProducts(filtered);
 }
 
 document.addEventListener("DOMContentLoaded", () => {
