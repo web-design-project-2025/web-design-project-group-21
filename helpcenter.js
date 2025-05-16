@@ -6,14 +6,15 @@ const faqs = [
   "Will I receive a confirmation email after booking?",
   "Do you offer travel guides or itineraries?",
   "Can I customize my travel package?",
-  "How do I find the best travel deals?"
+  "How do I find the best travel deals?",
 ];
 
 function renderFAQs(filter = "") {
   const list = document.getElementById("faq-list");
   list.innerHTML = "";
-  faqs.filter(q => q.toLowerCase().includes(filter.toLowerCase()))
-    .forEach(q => {
+  faqs
+    .filter((q) => q.toLowerCase().includes(filter.toLowerCase()))
+    .forEach((q) => {
       const li = document.createElement("li");
       li.textContent = q;
       list.appendChild(li);
@@ -22,10 +23,6 @@ function renderFAQs(filter = "") {
 
 document.getElementById("search-input").addEventListener("input", (e) => {
   renderFAQs(e.target.value);
-});
-
-document.getElementById("lang-switch").addEventListener("click", () => {
-  alert("Language switch not yet implemented on this page.");
 });
 
 renderFAQs();

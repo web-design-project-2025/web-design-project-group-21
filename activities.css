@@ -1,7 +1,5 @@
 :root {
   --green: #a0c49d;
-  --dark-green: #a0c49d;
-  --light-gray: #a0c49d;
 }
 
 body {
@@ -136,6 +134,8 @@ main {
   font-size: 40px;
   cursor: pointer;
   border-bottom: 2px solid transparent;
+  color: #7b576b;
+  text-decoration: none;
 }
 
 .filters button.active {
@@ -149,8 +149,10 @@ main {
   display: flex;
   border-radius: 10px;
   margin-bottom: 20px;
-  margin-left: 50px;
+  margin-left: 200px;
   margin-right: 50px;
+  width: 1200px;
+  align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
 }
@@ -161,27 +163,8 @@ main {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.ticket img {
-  width: 210px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 6px;
-  margin-right: 20px;
-}
-
 .ticket-content {
   flex: 1;
-}
-
-.ticket-content h3 {
-  margin: 0;
-  margin-top: 25px;
-  font-size: 19px;
-}
-
-.ticket-content p {
-  font-size: 17px;
-  margin-top: 8px;
 }
 
 .ticket-price {
@@ -200,7 +183,7 @@ main {
 
 .ticket-price button {
   background-color: #7b576b;
-  color: white;
+  color: rgb(139, 88, 88);
   border: none;
   padding: 8px 20px;
   font-size: 18px;
@@ -208,10 +191,12 @@ main {
   font-weight: bold;
   cursor: pointer;
   transition: transform 0.2s ease;
+  text-decoration: none;
 }
 
 .ticket-price button:hover {
   transform: scale(1.08);
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -242,9 +227,9 @@ main {
   .header-icons,
   .profile,
   .top-right {
-    flex-direction: column ;
-    align-items: flex-start ;
-    gap: 10px ;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
 
   @media (max-width: 768px) {
@@ -272,26 +257,25 @@ main {
     }
 
     .search-box input {
-      width: 90%; 
-      padding: 8px; 
-      font-size: 14px; 
-      margin-left: 0; 
+      width: 90%;
+      padding: 8px;
+      font-size: 14px;
+      margin-left: 0;
     }
   }
-
 
   .ticket,
   .checkout-grid,
   .detail-box,
   .cart-container {
-    flex-direction: column ;
+    flex-direction: column;
   }
 
   .signup-container,
   .login-container,
   .summary-block,
   .form-block {
-    padding: 20px ;
+    padding: 20px;
   }
 
   .search-bar,
@@ -299,27 +283,27 @@ main {
   .card,
   .ticket,
   .deal-card {
-    width: 100% ;
-    margin-left: 0 ;
-    margin-right: 0 ;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   .ticket img,
   .card img,
   .deal-img img,
   #cart-items img {
-    width: 100% ;
-    height: auto ;
+    width: 100%;
+    height: auto;
   }
 
   .ticket-price,
   .ticket-content {
     text-align: left;
-    margin-top: 10px ;
+    margin-top: 10px;
   }
 
   .autocomplete-suggestions {
-    max-height: 120px ;
-    font-size: 14px ;
+    max-height: 120px;
+    font-size: 14px;
   }
 }
