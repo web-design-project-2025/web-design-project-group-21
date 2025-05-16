@@ -16,6 +16,11 @@ header {
   justify-content: space-between;
 }
 
+.header-icons a {
+  text-decoration: none;
+  color: white;
+}
+
 .activity-list {
   text-decoration: none;
   margin-left: 10px;

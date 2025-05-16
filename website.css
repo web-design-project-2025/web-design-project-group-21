@@ -238,6 +238,15 @@ header {
   max-width: 100%;
 }
 
+.footer-section {
+  margin-top: 0px;
+  background-color: #5d7b57;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
 @media (max-width: 768px) {
   .ticket {
     flex-direction: column;
