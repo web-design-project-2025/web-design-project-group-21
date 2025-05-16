@@ -2,28 +2,28 @@
   {
     "city": "Stockholm",
     "title": "Stockholm Cinema Deal",
-    "price": 100,
+    "price": 550,
     "description": "Experience the latest movies in top cinemas.",
     "image": "images/stockholm-cinema.jpg"
   },
   {
     "city": "Gothenburg",
     "title": "Gothenburg Nature Escape",
-    "price": 150,
+    "price": 700,
     "description": "Enjoy scenic walks and coastal views.",
     "image": "images/gothenburg-nature.jpg"
   },
   {
     "city": "Malmo",
     "title": "Malmo Cultural Trip",
-    "price": 120,
+    "price": 650,
     "description": "Discover historic sites and modern art.",
     "image": "images/malmo-culture.jpg"
   },
   {
     "city": "Uppsala",
     "title": "Uppsala Cathedral Tour",
-    "price": 90,
+    "price": 600,
     "description": "Visit one of Sweden's most iconic churches.",
     "image": "images/uppsala-cathedral.jpg"
   }

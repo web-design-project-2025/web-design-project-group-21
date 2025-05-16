@@ -129,6 +129,18 @@ body {
   font-size: 10px;
   color: #4d7c5b;
 }
+
+footer {
+  margin-top: 60px;
+  background-color: #5d7b57;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  padding-bottom: 10px;
+}
+
 /* Responsive Enhancements */
 @media (max-width: 768px) {
   .top-nav,

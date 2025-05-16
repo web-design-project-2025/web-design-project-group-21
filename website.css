@@ -564,6 +564,16 @@ body.login-page {
   text-decoration: underline;
 }
 
+footer {
+  margin-top: 50px;
+  background-color: #5d7b57;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+}
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .header {

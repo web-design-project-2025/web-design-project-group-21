@@ -116,6 +116,17 @@ h1 {
   background-color: #4a6a4a;
   transform: scale(1.08);
 }
+
+footer {
+  margin-top: 60px;
+  background-color: #5d7b57;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 15px;
+  padding-bottom: 10px;
+}
 /* Responsive Enhancements */
 @media (max-width: 768px) {
   .top-nav,

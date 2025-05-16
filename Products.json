@@ -4,7 +4,7 @@
     "title": "Stockholm Cinema Deal",
     "type": "Cinema Ticket",
     "city": "Stockholm",
-    "price": 920,
+    "price": 550,
     "image": "img/Cinema.png",
     "description": "Experience the latest movies in top cinemas across Sweden. Enjoy a wide selection of international blockbusters and local Swedish films in a comfortable, modern setting.",
     "note": "Valid for one-time entry. Available in Stockholm, Gothenburg, Malmö, and more.<br>ℹ️ Please note that if your visit requires travel (e.g. a bus ticket or overnight stay), the total cost may be higher than the listed ticket price."
@@ -15,7 +15,7 @@
     "title": "Gothenburg Culture Trip",
     "type": "Culture",
     "city": "Goteborg",
-    "price": 850,
+    "price": 700,
     "image": "img/Gothenburg.png",
     "description": "Gothenburg, Sweden’s cultural hub, blends history and modern creativity. Explore its art scene at the Gothenburg Museum of Art, catch a show at the opera, or stroll through the charming Haga district. With vibrant music, cozy cafés, and beautiful coastal views, it’s a perfect spot for culture lovers.",
     "note": "Valid for one-time entry. Includes museum access and guided walk.<br>ℹ️ Please note that if your visit requires travel (e.g. a bus ticket or overnight stay), the total cost may be higher than the listed ticket price."
@@ -25,7 +25,7 @@
     "title": "Jonkoping Cinema Deal",
     "type": "Cinema",
     "city": "Jonkoping",
-    "price": 700,
+    "price": 600,
     "image": "img/Jonkopingcinema.png",
     "description": " Jönköping, a charming city in Sweden, offers a delightful mix of cultural experiences, including its cinema scene. Enjoy the latest films at the cozy Bio Roxy or catch a special screening at Filmstaden Jönköping. With a variety of cinemas to choose from, movie lovers can relax and immerse themselves in the latest blockbusters or indie gems.  ",
     "note": "Valid for one-time entry. Available in Stockholm, Gothenburg, Malmö, and more.<br>ℹ️ Please note that if your visit requires travel (e.g. a bus ticket or overnight stay), the total cost may be higher than the listed ticket price. "
@@ -45,7 +45,7 @@
     "title": "Uppsala Culture Trip",
     "type": "Culture",
     "city": "Uppsala",
-    "price": 600,
+    "price": 550,
     "image": "img/Uppsala2.png",
     "description": "Uppsala, a historic Swedish city, is rich in culture and charm. Visit the iconic Uppsala Cathedral, explore the Gustavianum museum, or stroll through the beautiful botanical gardens. As a university town, it’s filled with lively cafés, historic buildings, and vibrant arts. With its blend of tradition and modernity, Uppsala offers a unique cultural experience. ",
     "note": "Valid for one-time entry. Includes museum access and guided walk.<br>ℹ️ Please note that if your visit requires travel (e.g. a bus ticket or overnight stay), the total cost may be higher than the listed ticket price."
