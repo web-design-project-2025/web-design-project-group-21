@@ -156,6 +156,7 @@ main {
   font-size: 14px;
   border-radius: 6px;
   font-weight: bold;
+  margin-right: 20px;
   cursor: pointer;
   transition: transform 0.2s ease;
   text-decoration: none;
@@ -174,10 +175,12 @@ main {
   gap: 10px;
   border-radius: 10px;
   margin-bottom: 20px;
-  margin-left: 400px;
+  flex-direction: row;
+  margin-left: 330px;
   margin-right: 50px;
-  width: 800px;
+  width: 900px;
   align-items: center;
+  justify-content: space-between;
   transition: transform 0.3s ease, box-shadow 0.3s ease,
     background-color 0.3s ease;
 }
