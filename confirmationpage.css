@@ -17,6 +17,12 @@ body {
   height: 40px;
 }
 
+.top-right a {
+  text-decoration: none;
+  color: white;
+  gap: 10px;
+}
+
 .top-nav a {
   position: relative;
   margin: 0 10px;
