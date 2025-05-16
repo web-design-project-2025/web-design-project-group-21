@@ -28,7 +28,7 @@ header {
 }
 
 .header-container {
-  margin-top: 0; 
+  margin-top: 10px;
   padding-top: 0;
   display: flex;
   gap: 20px;
@@ -37,6 +37,8 @@ header {
   align-items: center;
   font-weight: bold;
   justify-content: flex-end;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
 }
 
 .header-container a,
@@ -48,6 +50,7 @@ header {
   font-size: 16px;
   align-items: center;
   transition: color 0.3s ease;
+  padding-top: 0px;
 }
 
 .header-container a::after,
@@ -74,11 +77,13 @@ header {
 
 .logo img {
   height: 200px;
+  margin-left: 20px;
 }
 
 .hero h1 {
   margin-bottom: 20px;
   margin-left: 310px;
+  margin-top: 50px;
 }
 
 .search-bar {
@@ -261,8 +266,9 @@ header {
   .header-container .lang-switch {
     font-size: 14px;
     margin: 4px 0;
-    padding-top: 100px;
-    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 30px;
+    justify-content: center;
   }
 
   .logo img {
@@ -275,6 +281,11 @@ header {
     margin-left: 0;
     text-align: center;
     font-size: 1.6rem;
+  }
+
+  .header-container {
+    padding-top: 0px;
+    margin-top: 0px;
   }
 
   .search-bar {
