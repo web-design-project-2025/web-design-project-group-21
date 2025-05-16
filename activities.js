@@ -20,8 +20,11 @@ function renderProducts(list, showDescription = true) {
     const card = document.createElement("div");
     card.className = "ticket";
     card.innerHTML = `
-      <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
+    <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
+    <div
       <h3>${p.title}</h3>
+      </div>
+    
       ${descriptionHTML}
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
         <p style="margin: 8px 0;"><strong>${p.price} SEK</strong></p>
