@@ -72,7 +72,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (cart.length === 0) {
       alert("Your cart is empty.");
     } else {
-      window.location.href = "CART.html";
+      window.location.href = "cart.html";
     }
   });
 });
