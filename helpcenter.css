@@ -131,8 +131,9 @@ body {
 }
 
 footer {
-  margin-top: 60px;
+  margin-top: 300px;
   background-color: #5d7b57;
+
   color: white;
   display: flex;
   justify-content: space-between;

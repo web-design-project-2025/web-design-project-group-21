@@ -149,6 +149,7 @@ body.signup-page {
 }
 
 footer {
+  margin-top: 300px;
   background-color: #5d7b57;
   color: white;
   display: flex;
