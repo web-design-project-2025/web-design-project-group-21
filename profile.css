@@ -160,14 +160,14 @@ footer {
 
   .header {
     flex-direction: column;
-    align-items: stretch; /* full width */
+    align-items: stretch; 
     padding: 16px;
   }
 
   .logo {
     height: 40px;
     margin-bottom: 16px;
-    align-self: flex-start; /* keep logo left */
+    align-self: flex-start; 
   }
 
   .nav {
@@ -175,7 +175,7 @@ footer {
     gap: 12px;
     width: 100%;
     margin-bottom: 16px;
-    align-items: center; /* center nav links */
+    align-items: center; 
   }
 
   .nav a {
