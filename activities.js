@@ -19,10 +19,10 @@ function renderProducts(list) {
     card.className = "ticket";
     card.innerHTML = `
       <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
-      <h3>${p.title}</h3>
-      <p><strong>${p.price} SEK</strong></p>
-      ${descriptionHTML}
+    
+       <h3>${p.title}</h3> ${descriptionHTML}
       <div style="text-align: right; margin-top: 10px">
+      <p><strong>${p.price} SEK</strong></p>
         <a href="details.html?id=${p.id}" class="book-btn">More Info</a>
       </div>
     `;
