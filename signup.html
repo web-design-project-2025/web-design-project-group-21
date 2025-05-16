@@ -17,11 +17,6 @@
         <a href="helpcenter.html">Help center</a>
         <a href="editorial.html">Insights</a>
       </nav>
-      <div class="lang-switch">
-        <button onclick="switchLang()" id="lang-toggle">
-          English / Swedish
-        </button>
-      </div>
     </header>
 
     <main class="signup-container">
@@ -70,21 +65,13 @@
           >
         </div>
 
-        <button type="submit" class="submit-btn">Sign me up!</button>
+        <button
+          class="submit-btn"
+          onclick="window.location.href='profile.html'"
+        >
+          Sign me up!
+        </button>
       </form>
     </main>
-
-    <script>
-      function togglePassword() {
-        const pw = document.getElementById("password");
-        pw.type = pw.type === "password" ? "text" : "password";
-      }
-      function switchLang() {
-        const btn = document.getElementById("lang-toggle");
-        btn.textContent = btn.textContent.includes("English")
-          ? "Svenska / Engelska"
-          : "English / Swedish";
-      }
-    </script>
   </body>
 </html>

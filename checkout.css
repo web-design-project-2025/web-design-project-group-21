@@ -53,6 +53,11 @@ body {
   width: 100%;
 }
 
+.top-right a {
+  text-decoration: none;
+  color: white;
+  gap: 10px;
+}
 .profile {
   font-size: 1rem;
 }

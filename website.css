@@ -28,6 +28,8 @@ header {
 }
 
 .header-container {
+  margin-top: 0; 
+  padding-top: 0;
   display: flex;
   gap: 20px;
   color: white;
@@ -191,14 +193,37 @@ header {
 }
 
 #view-all-btn {
-  font-size: 18px;
-  width: 230px;
+  font-size: 16px;
+  width: 180px;
   height: 50px;
   border-radius: 8px;
   background-color: #5e785f;
   color: white;
   border: none;
   margin-left: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#view-all-btn:hover {
+  background-color: #4b614c;
+  transform: scale(1.03);
+}
+
+.view-deal-btn {
+  background-color: #5e785f !important;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-left: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.view-deal-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .wide-pic {
@@ -244,10 +269,6 @@ header {
     height: 150px !important;
     margin: 0 auto;
     display: block;
-  }
-
-  .hero {
-    justify-content: center;
   }
 
   .hero h1 {
@@ -589,6 +610,11 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  color: white;
+}
+
+.top-right a {
+  text-decoration: none;
   color: white;
 }
 
