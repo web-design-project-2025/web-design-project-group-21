@@ -1,41 +1,4 @@
 /*page 1*/
-const translations = {
-  en: {
-    hero: "Book your trip now!",
-    book: "Book",
-    bestDeals: "Best deals at the moment",
-    explore: "Explore Sweden",
-    viewDeal: "View deal",
-    viewAll: "View all of our deals",
-    footer: {
-      newsletter:
-        "Get exclusive inspiration for your next trip –<br>subscribe to our newsletter.",
-      help: "Helpcenter",
-      terms: "Terms & conditions",
-      legal: "Legal information",
-      cookie: "Cookie settings",
-      privacy: "Privacy",
-    },
-  },
-  sv: {
-    hero: "Boka din resa nu!",
-    book: "Boka",
-    bestDeals: "Bästa erbjudandena just nu",
-    explore: "Utforska Sverige",
-    viewDeal: "Visa erbjudande",
-    viewAll: "Visa alla erbjudanden",
-    footer: {
-      newsletter:
-        "Få exklusiv inspiration till din nästa resa –<br>prenumerera på vårt nyhetsbrev.",
-      help: "Hjälpcenter",
-      terms: "Villkor",
-      legal: "Juridisk information",
-      cookie: "Cookie-inställningar",
-      privacy: "Integritetspolicy",
-    },
-  },
-};
-
 document.getElementById("view-all-btn").addEventListener("click", function () {
   window.location.href = "page2.html";
 });
@@ -89,65 +52,6 @@ function toggleFavorite(button) {
     favorites.push(id);
   }
   localStorage.setItem("favorites", JSON.stringify(favorites));
-}
-
-function switchLang() {
-  const translations = {
-    en: {
-      cinemaTitle: "Cinema with Transport – 300 SEK",
-      cinemaDesc:
-        "Enjoy a movie night made easy! This combo deal includes a cinema ticket and public transport. It's a convenient and affordable way to enjoy films and get around with ease.",
-      cultureTitle: "Culture Trip with Transport – 400 SEK",
-      cultureDesc:
-        "This package includes access to museums and landmarks with public transport – a simple, affordable way to explore culture and get around hassle-free.",
-      moreInfo: "more info",
-      sort: "Sort by:",
-      price: "Price:",
-      city: "City:",
-      toggle: "English / Swedish",
-    },
-    sv: {
-      cinemaTitle: "Bio med transport – 300 SEK",
-      cinemaDesc:
-        "Njut av en enkel biokväll! Denna kombobiljett inkluderar biobiljett och kollektivtrafik för smidig transport.",
-      cultureTitle: "Kulturresa med transport – 400 SEK",
-      cultureDesc:
-        "Paketet inkluderar museer och landmärken med kollektivtrafik – enkelt och prisvärt sätt att utforska kultur.",
-      moreInfo: "mer info",
-      sort: "Sortera efter:",
-      price: "Pris:",
-      city: "Stad:",
-      toggle: "Svenska / Engelska",
-    },
-  };
-
-  const current = document
-    .getElementById("lang-toggle")
-    .textContent.includes("English")
-    ? "sv"
-    : "en";
-  const t = translations[current];
-
-  document.getElementById("lang-toggle").textContent = t.toggle;
-  document.querySelectorAll(".ticket")[0].querySelector("h3").textContent =
-    t.cinemaTitle;
-  document.querySelectorAll(".ticket")[0].querySelector("p").textContent =
-    t.cinemaDesc;
-  document
-    .querySelectorAll(".ticket")[0]
-    .querySelector("button:last-of-type").textContent = t.moreInfo;
-
-  document.querySelectorAll(".ticket")[1].querySelector("h3").textContent =
-    t.cultureTitle;
-  document.querySelectorAll(".ticket")[1].querySelector("p").textContent =
-    t.cultureDesc;
-  document
-    .querySelectorAll(".ticket")[1]
-    .querySelector("button:last-of-type").textContent = t.moreInfo;
-
-  document.querySelector("label[for='sortSelect']").textContent = t.sort;
-  document.querySelector("label[for='priceRange']").textContent = t.price;
-  document.querySelector("label[for='cityFilter']").textContent = t.city;
 }
 
 function applySortFilter() {
@@ -224,48 +128,6 @@ function handleSearchInput() {
     });
 }
 
-function switchLang() {
-  const translations = {
-    en: {
-      title: "Stockholm Cinema deal",
-      type: "🎬 Cinema Ticket",
-      desc: "Experience the latest movies in top cinemas across Sweden. Enjoy a wide selection of international blockbusters and local Swedish films in a comfortable, modern setting.",
-      price: "Price: 100 SEK per person",
-      valid: "🎟 Valid for one-time entry",
-      cities:
-        "📍 Available in major cities including Stockholm, Gothenburg, Malmö, and more",
-      note: "Choose your date, time, and preferred cinema to book your ticket today!",
-      cart: "Add to cart",
-      toggle: "English / Swedish",
-    },
-    sv: {
-      title: "Biobiljett i Stockholm",
-      type: "🎬 Biobiljett",
-      desc: "Se de senaste filmerna på de bästa biograferna i Sverige. Njut av internationella storfilmer och svenska filmer i en bekväm och modern miljö.",
-      price: "Pris: 100 SEK per person",
-      valid: "🎟 Gäller för engångsinträde",
-      cities: "📍 Tillgänglig i städer som Stockholm, Göteborg, Malmö och fler",
-      note: "Välj datum, tid och biograf för att boka din biljett redan idag!",
-      cart: "Lägg i kundvagn",
-      toggle: "Svenska / Engelska",
-    },
-  };
-
-  const langBtn = document.getElementById("lang-toggle");
-  const currentLang = langBtn.textContent.includes("English") ? "sv" : "en";
-  const t = translations[currentLang];
-
-  document.getElementById("title").textContent = t.title;
-  document.getElementById("type").textContent = t.type;
-  document.getElementById("desc").textContent = t.desc;
-  document.getElementById("price").textContent = t.price;
-  document.getElementById("valid").textContent = t.valid;
-  document.getElementById("cities").textContent = t.cities;
-  document.getElementById("note").textContent = t.note;
-  document.getElementById("cart-btn").textContent = t.cart;
-  langBtn.textContent = t.toggle;
-}
-
 /*page 4*/
 function togglePassword() {
   const pw = document.getElementById("password");
@@ -292,39 +154,4 @@ function login() {
   } else {
     alert("Incorrect email/username or password.");
   }
-}
-
-function switchLang() {
-  const toggleBtn = document.getElementById("lang-toggle");
-  const current = toggleBtn.textContent.includes("English") ? "sv" : "en";
-
-  const t = {
-    en: {
-      login: "Log in",
-      email: "Email or username",
-      password: "Password",
-      forgot: "Forgot password?",
-      continue: "Continue",
-      signup: "Don't have an account? Sign up here",
-      toggle: "English / Swedish",
-    },
-    sv: {
-      login: "Logga in",
-      email: "E-post eller användarnamn",
-      password: "Lösenord",
-      forgot: "Glömt lösenord?",
-      continue: "Fortsätt",
-      signup: "Har du inget konto? Registrera dig här",
-      toggle: "Svenska / Engelska",
-    },
-  };
-
-  const lang = t[current];
-  toggleBtn.textContent = lang.toggle;
-  document.querySelector(".login-form h2").textContent = lang.login;
-  document.querySelector("label[for='email']").textContent = lang.email;
-  document.querySelector("label[for='password']").textContent = lang.password;
-  document.querySelector(".forgot").textContent = lang.forgot;
-  document.querySelector(".submit-btn").textContent = lang.continue;
-  document.querySelector(".signup-link").innerHTML = lang.signup;
 }

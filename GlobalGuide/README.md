@@ -16,17 +16,29 @@ Project Structure
 ├── checkout.html            # Checkout page for a booking
 ├── cart.html                # Stores the tickets to book 
 ├── editorial.html           # Travel blog-style editorial content
-├── confirmation.html        # Booking confirmation page
+├── details.html             # Second page of the activities page 
+├── confirmationpage.html    # Booking confirmation page
 │
 ├── website.css              # General styles for most pages
 ├── signup.css               # Specific styles for signup page
+├── activities.css           # Specific styles for activites page 
+├── bookinghistory.css       # Specific styles for bookinghistory page
 ├── helpcenter.css           # Specific styles for help center
+├── cart.css                 # Specific styles for cart page
 ├── profile.css              # Profile dashboard styles
+├── checkout.css             # Specific styles for checkout page
+├── details.css              # Specific styles for details page
 ├── confirmationpage.css     # Styles for booking confirmation
 │
 ├── website.js               # Handles booking search
 ├── login.js                 # Manages login logic
+├── signup.js                # Manages signup logic
+├── activities.js            # Manages the ticket filters 
+├── checkout.js              # Displays the items and total cost from the shopping cart
+├── conformationpage.js      # Makes a button that takes the user back to the homepage
+├── cart.js                  # Manages the cart features 
 ├── profile.js               # Handles user data display
+├── scripts.js               # loads and displays a product’s details from products.json
 ├── helpcenter.js            # FAQ rendering and search
 │
 └── /img                     # Contains images used throughout the site
