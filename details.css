@@ -91,42 +91,149 @@ button#bookBtn:hover {
 }
 /* Responsive Enhancements */
 @media (max-width: 768px) {
-  .top-nav,
-  .nav,
-  .header-icons,
-  .profile,
-  .top-right {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 10px !important;
+  .top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
   }
 
-  .ticket,
-  .checkout-grid,
-  .detail-box,
-  .cart-container {
-    flex-direction: column !important;
+  .top-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  .signup-container,
-  .login-container,
-  .summary-block,
-  .form-block {
-    padding: 20px !important;
+  .detail-container {
+    margin: 20px;
+    padding: 15px;
+    height: auto;
   }
 
-  .search-bar,
-  .filters,
+  .detail-box {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .detail-img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+  }
+
+  .detail-info h1 {
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .detail-info p,
+  .detail-info .note {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  button#bookBtn {
+    width: 100%;
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    .top-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 10px;
+      gap: 10px;
+    }
+
+    .top-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .detail-container {
+      margin: 20px;
+      padding: 15px;
+      height: auto;
+    }
+
+    .detail-box {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .detail-img {
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    .detail-info h1 {
+      margin-top: 20px;
+      font-size: 22px;
+      text-align: center;
+    }
+
+    .detail-info p,
+    .detail-info .note {
+      text-align: center;
+      font-size: 15px;
+    }
+
+    button#bookBtn {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .profile {
+      font-size: 13px;
+      text-align: left;
+    }
+
+    .card,
+    .ticket,
+    .deal-card,
+    .search-bar,
+    .filters {
+      width: 100% !important;
+      margin: 0 auto !important;
+    }
+
+    .card img,
+    .ticket img,
+    .deal-img img,
+    #cart-items img {
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .ticket-price,
+    .ticket-content {
+      text-align: left !important;
+      margin-top: 10px;
+    }
+
+    .autocomplete-suggestions {
+      max-height: 120px;
+      font-size: 14px;
+    }
+  }
+
   .card,
   .ticket,
-  .deal-card {
+  .deal-card,
+  .search-bar,
+  .filters {
     width: 100% !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin: 0 auto !important;
   }
 
-  .ticket img,
   .card img,
+  .ticket img,
   .deal-img img,
   #cart-items img {
     width: 100% !important;
@@ -136,11 +243,11 @@ button#bookBtn:hover {
   .ticket-price,
   .ticket-content {
     text-align: left !important;
-    margin-top: 10px !important;
+    margin-top: 10px;
   }
 
   .autocomplete-suggestions {
-    max-height: 120px !important;
-    font-size: 14px !important;
+    max-height: 120px;
+    font-size: 14px;
   }
 }
