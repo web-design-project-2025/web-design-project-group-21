@@ -271,8 +271,13 @@ header {
     object-position: center;
   }
 
+  .header-container a::after,
+  .header-container .lang-switch::after {
+    display: none;
+  }
+
   .header-container a,
-  .header-container .lang-switch {
+  .header-container {
     font-size: 14px;
     margin: 4px 0;
     padding-top: 0px;
