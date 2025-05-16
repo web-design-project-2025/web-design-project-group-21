@@ -38,33 +38,6 @@ function register(event) {
   window.location.href = "login.html";
 }
 
-function switchLang() {
-  const toggleBtn = document.getElementById("lang-toggle");
-  const current = toggleBtn.textContent.includes("English") ? "sv" : "en";
-
-  const t = {
-    en: {
-      signup: "Sign up",
-      username: "Username",
-      email: "Email",
-      password: "Password",
-      offers: "I'd like to receive personalized offers...",
-      terms: "By registering, I confirm that I accept the terms...",
-      button: "Sign me up!",
-      toggle: "English / Swedish",
-    },
-    sv: {
-      signup: "Skapa konto",
-      username: "Användarnamn",
-      email: "E-post",
-      password: "Lösenord",
-      offers: "Jag vill få personliga erbjudanden...",
-      terms: "Genom att registrera mig godkänner jag villkoren...",
-      button: "Registrera mig!",
-      toggle: "Svenska / Engelska",
-    },
-  };
-
   const lang = t[current];
   toggleBtn.textContent = lang.toggle;
   document.querySelector(".signup-form h2").textContent = lang.signup;
@@ -74,7 +47,7 @@ function switchLang() {
   document.getElementById("offers-label").textContent = lang.offers;
   document.getElementById("terms-label").textContent = lang.terms;
   document.getElementById("submit-btn").textContent = lang.button;
-}
+
 
 function togglePassword() {
   const pw = document.getElementById("password");
