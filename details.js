@@ -26,5 +26,29 @@ fetch("Products.json")
       "<p>Could not load product data.</p>";
   });
 
+if (product) {
+      container.innerHTML = `
+        <h1>${product.title}</h1>
+        <img src="${product.image}" alt="${product.title}" style="width:300px;" />
+        <p>${product.description}</p>
+        <p><strong>${product.price ?? "Price missing"} SEK</strong></p>
+        <p><em>${product.city ?? ""}</em></p>
+        <button id="book-btn" style="padding: 10px 20px; font-size: 16px; margin-top: 20px;">
+          Book Now
+        </button>
+      `;
+
+      document.getElementById("book-btn").addEventListener("click", () => {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        alert("Product toegevoegd aan winkelwagen!");
+        window.location.href = "cart.html";
+      });
+
+    } else {
+      container.innerHTML = "<p>Product not found.</p>";
+    }
+
 
 
