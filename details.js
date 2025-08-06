@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("Products.json")
     .then((res) => res.json())
     .then((products) => {
-      const product = products.find((p) => p.id === id);
+      const product = products.find((p) => p.id == id); // let op: == in plaats van ===
 
       const container = document.getElementById("product-detail");
 
@@ -20,5 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         container.innerHTML = "<p>Product not found.</p>";
       }
-    });
+    })
+    .catch((err) => {
+  console.error(err);
+  document.getElementById("product-detail").innerHTML =
+    "<p>Failed to load products.</p>";
+});
+
 });

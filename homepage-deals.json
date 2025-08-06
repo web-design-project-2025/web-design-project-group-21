@@ -3,24 +3,32 @@
     "id": "1",
     "title": "Stockholm City Pass",
     "description": "Access to museums, transportation and more.",
-    "image": "images/stockholm-pass.jpg"
+    "image": "images/stockholm-pass.jpg",
+    "price": 450,
+    "city": "Stockholm"
   },
   {
     "id": "2",
     "title": "Gothenburg Archipelago Cruise",
     "description": "Half-day boat trip through scenic islands.",
-    "image": "images/gothenburg-cruise.jpg"
+    "image": "images/gothenburg-cruise.jpg",
+    "price": 600,
+    "city": "Gothenburg"
   },
   {
     "id": "3",
     "title": "Malmö Cultural Day Tour",
     "description": "Walking tour with local guide and entrance fees included.",
-    "image": "images/malmo-tour.jpg"
+    "image": "images/malmo-tour.jpg",
+    "price": 350,
+    "city": "Malmö"
   },
   {
     "id": "4",
     "title": "Uppsala Historic Highlights",
     "description": "Explore Sweden's oldest university town.",
-    "image": "images/uppsala-tour.jpg"
+    "image": "images/uppsala-tour.jpg",
+    "price": 400,
+    "city": "Uppsala"
   }
 ]
