@@ -22,7 +22,7 @@ function renderProducts(list) {
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
         <p style="margin: 8px 0;"><strong>${p.price} SEK</strong></p>
-        <a href="details.html?id=${p.id}" class="book-btn">More Info</a>
+       <a href="/web-design-project-group-21/details.html?id=${p.id}" class="book-btn">More Info</a>
       </div>
     `;
     container.appendChild(card);
