@@ -30,5 +30,13 @@
     "image": "images/uppsala-tour.jpg",
     "price": 400,
     "city": "Uppsala"
-  }
+  },
+  {
+  "id": "5",
+  "title": "Jonkoping Cinema Deal",
+  "description": "Jönköping, a charming city in Sweden, offers a delightful mix of cultural experiences, including its cinema scene. Enjoy the latest films at the cozy Bio Roxy or catch a special screening at Filmstaden Jönköping. With a variety of cinemas to choose from, movie lovers can relax and immerse themselves in the latest blockbusters or indie gems.",
+  "image": "images/jonkoping-cinema.jpg",
+  "price": 600,
+  "city": "Jonkoping"
+}
 ]

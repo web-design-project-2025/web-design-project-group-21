@@ -7,6 +7,28 @@ function searchTrips() {
   window.location.href = "activities.html";
 }
 
+function renderProducts(list) {
+  const container = document.getElementById("product-list");
+  container.innerHTML = "";
+
+  list.forEach((p) => {
+    const card = document.createElement("div");
+    card.className = "ticket";
+    card.innerHTML = `
+      <img src="${p.image}" alt="${p.title}" style="width:100%; max-width:250px; border-radius:6px" />
+      <div>
+        <h3>${p.title}</h3>
+      </div>
+
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 10px">
+        <p style="margin: 8px 0;"><strong>${p.price} SEK</strong></p>
+<a href="details.html?id=${p.id}" class="book-btn">More Info</a>
+
+    `;
+    container.appendChild(card);
+  });
+}
+
 /*page 2*/
 const cities = ["stockholm", "goteborg"];
 
