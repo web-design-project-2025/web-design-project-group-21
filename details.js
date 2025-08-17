@@ -29,10 +29,10 @@ fetch("Products.json")
         if (!alreadyInCart) {
           cart.push(product);
           localStorage.setItem("cart", JSON.stringify(cart));
-          alert("Product toegevoegd aan winkelwagen!");
+          alert("Product added to cart!");
           window.location.href = "cart.html";
         } else {
-          alert("Dit product zit al in je winkelwagen.");
+          alert("This product is already in your cart.");
         }
       });
     } else {
