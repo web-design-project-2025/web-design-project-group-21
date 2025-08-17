@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     container.innerHTML = `
       ${html}
       <div class="summary-line total">
-        <span>总计</span>
+        <span>Total</span>
         <span><strong>${total} SEK</strong></span>
       </div>
     `;

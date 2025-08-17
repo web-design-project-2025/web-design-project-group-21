@@ -118,3 +118,16 @@ CSS style
 - **Background Gray:** Light grays and off-whites (`#f5f5f5`, `#eee`, `#ece7e3`) provide a clean, neutral background.
 - **Text Colors:** Mainly dark gray (`#333`), white for text on green backgrounds.
 
+
+References:
+For our final project we have had help from one of our friends that does programming. He has helped us mainly with some problems we really couldn't figure out, for example how to connect our activity page with the json file deals. 
+Other than that we have used some help from chatgpt, you will find the links below.
+
+https://chatgpt.com/share/68a1d1fa-55f0-800c-a4aa-8def3b14712a
+This was used to give us an image of how to make our json file, we used it as a guide.
+
+https://chatgpt.com/share/68a1d28c-e038-800c-8083-31487d3730ea
+We used a bit of help to make sure our cart was working correctly since we encountered some problems.
+
+https://chatgpt.com/c/68a1d488-ef80-832e-9360-88c89d8adbf8
+We used chat as a guide since we didn't really know how to start making our search bar.
